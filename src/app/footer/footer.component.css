@@ -1,0 +1,38 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: fixed;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: start;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+}
+.redes-caja,
+.reseñas-caja,
+.nombre-proyecto {
+    width: 33%;
+}
+.redes-link,
+.reseña-link,
+.nombre-proyecto {
+    display: flex;
+    flex-direction: column;
+}
+.link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+    color: rgb(200,200,200);
+}
+.texto-nombre{
+    font-size: 20px;
+}
+.frase{
+    font-size: 18px;
+}

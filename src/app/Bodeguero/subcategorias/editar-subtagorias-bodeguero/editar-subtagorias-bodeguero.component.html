@@ -1,0 +1,27 @@
+<app-menu-bodeguero></app-menu-bodeguero>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+  <form (ngSubmit)="onSubmit()" #subcategoriaForm="ngForm" class="formulario">
+    <h1>Formulario registro de subcategorías</h1>
+
+    <label class="control-label" for="subc_nombre">Nombre de la Subcategoría</label>
+    <input type="text" required [(ngModel)]="subcategoria.subc_nombre" name="subc_nombre" class="input-formulario">
+
+    <br>
+
+    <label class="control-label" for="idcategoria">Categoría</label>
+    <select required [(ngModel)]="subcategoria.idcategoria" name="idcategoria" class="input-formulario">
+      <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">{{ categoria.idcategoria }} - {{ categoria.cat_nombre }}</option>
+    </select>
+
+    <br>
+
+
+    <br>
+
+    <div class="boton">
+      <button type="submit" class="link-boton">REALIZAR</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

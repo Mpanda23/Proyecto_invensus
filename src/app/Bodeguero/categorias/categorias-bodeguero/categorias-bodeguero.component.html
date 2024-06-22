@@ -1,0 +1,22 @@
+<app-menu-bodeguero></app-menu-bodeguero>
+<app-imagenlogo></app-imagenlogo>
+<div class="caja-agregar">
+  <a [routerLink]="['/agregar-categorias-bodeguero/agregar']" class="boton-agregar">agregar</a>
+</div>
+<div class="contenido-tabla">
+  <table border="rgb(0,0,0) solid 1px">
+    <thead>
+      <tr class="tabla-titulo">
+          <th>ID CATEGORIA</th>
+          <th>NOMBRE CATEGORIA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tabla-item" *ngFor="let categorias of categorias | async" >
+          <td><i>{{ categorias.idcategoria }}</i></td>
+          <td><i>{{ categorias.cat_nombre }}</i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>

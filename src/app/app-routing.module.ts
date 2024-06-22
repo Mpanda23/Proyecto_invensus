@@ -1,0 +1,212 @@
+import { NgModule, Component } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { EditarCategoriasComponent } from './Administrador/categorias/editar-categorias/editar-categorias.component';
+import { ListaCategoriasComponent } from './Administrador/categorias/lista-categorias/lista-categorias.component';
+import { ListarUsuariosComponent } from './Administrador/usuarios/listar-usuarios/listar-usuarios.component';
+import { EditarUsuariosComponent } from './Administrador/usuarios/editar-usuarios/editar-usuarios.component';
+import { ListaProductosComponent } from './Administrador/productos/lista-productos/lista-productos.component';
+import { EditarProductoComponent } from './Administrador/productos/editar-producto/editar-producto.component';
+import { ListaSubcategoriasComponent } from './Administrador/subcategorias/lista-subcategorias/lista-subcategorias.component';
+import { EditarSubcategoriaComponent } from './Administrador/subcategorias/editar-subcategoria/editar-subcategoria.component';
+import { ListarPlatosComponent } from './Administrador/platos/listar-platos/listar-platos.component';
+import { EditarPlatosComponent } from './Administrador/platos/editar-platos/editar-platos.component';
+import { ListaProveedoresComponent } from './Administrador/proveedores/lista-proveedores/lista-proveedores.component';
+import { EditarProveedoresComponent } from './Administrador/proveedores/editar-proveedores/editar-proveedores.component';
+import { ListaSucursal1Component } from './Administrador/sucursal1/lista-sucursal1/lista-sucursal1.component';
+import { EditarSucursal1Component } from './Administrador/sucursal1/editar-sucursal1/editar-sucursal1.component';
+import { ListaSucursal2Component } from './Administrador/sucursal2/lista-sucursal2/lista-sucursal2.component';
+import { EditarSucursal2Component } from './Administrador/sucursal2/editar-sucursal2/editar-sucursal2.component';
+import { ListaSucursal3Component } from './Administrador/sucursal3/lista-sucursal3/lista-sucursal3.component';
+import { EditarSucursal3Component } from './Administrador/sucursal3/editar-sucursal3/editar-sucursal3.component';
+import { ListarInventarioComponent } from './Administrador/vista-inventario/listar-inventario/ListarInventarioComponent';
+import { LoginComponent } from './login/login/login.component';
+import { VistaPersonalComponent } from './Personal/vista-personal/vista-personal.component';
+import { VistaAdminComponent } from './Administrador/vista-admin/vista-admin.component';
+import { VistaBodegueroComponent } from './Bodeguero/vista-bodeguero/vista-bodeguero.component';
+import { VistaDuenoComponent } from './Dueno/vista-dueno/vista-dueno.component';
+import { VistaJefeInventarioComponent } from './jefe_inventario/vista-jefe-inventario/vista-jefe-inventario.component';
+import { ProductosBodegueroComponent } from './Bodeguero/productos/productos-bodeguero/productos-bodeguero.component';
+import { EditarProductosBodegueroComponent } from './Bodeguero/productos/editar-productos-bodeguero/editar-productos-bodeguero.component';
+import { CategoriasBodegueroComponent } from './Bodeguero/categorias/categorias-bodeguero/categorias-bodeguero.component';
+import { ProveedoresBodegueroComponent } from './Bodeguero/proveedores/proveedores-bodeguero/proveedores-bodeguero.component'
+import { SubcategoriasBodegueroComponent } from './Bodeguero/subcategorias/subcategorias-bodeguero/subcategorias-bodeguero.component';
+import { EditarCategoriasBodegueroComponent } from './Bodeguero/categorias/editar-categorias-bodeguero/editar-categorias-bodeguero.component';
+import { EditarSubtagoriasBodegueroComponent } from './Bodeguero/subcategorias/editar-subtagorias-bodeguero/editar-subtagorias-bodeguero.component';
+import { ListarqrComponent } from './Administrador/codigoqr/listarqr/listarqr.component';
+import { CodigoqrComponent } from './Administrador/codigoqr/codigoqr.component';
+import { CodigoqrComponentBodeguero } from './Bodeguero/codigoqr/codigoqr.component';
+import { ListarqrComponentBodeguero } from './Bodeguero/codigoqr/listarqr/listarqr.component';
+import { VistaCategoriasComponent } from './Dueno/categorias/vista-categorias/vista-categorias.component';
+import { VistaSubcategoriasComponent } from './Dueno/subcategorias/vista-subcategorias/vista-subcategorias.component';
+import { VistaPlatosComponent } from './Dueno/platos/vista-platos/vista-platos.component';
+import { VistaProductosComponent } from './Dueno/productos/vista-productos/vista-productos.component';
+import { VistaSucursal1Component } from './Dueno/sucursal1/vista-sucursal1/vista-sucursal1.component';
+import { Vistasucursal2Component } from './Dueno/sucursal2/vistasucursal2/vistasucursal2.component';
+import { VistaSucursal3Component } from './Dueno/sucursal3/vista-sucursal3/vista-sucursal3.component';
+import { ListarSucursal1BodegueroComponent } from './Bodeguero/sucursal1/listar-sucursal1-bodeguero/listar-sucursal1-bodeguero.component';
+import { ListarSucursal2BodegueroComponent } from './Bodeguero/sucursal2/listar-sucursal2-bodeguero/listar-sucursal2-bodeguero.component';
+import { ListarSucursal3BodegueroComponent } from './Bodeguero/sucursal3/listar-sucursal3-bodeguero/listar-sucursal3-bodeguero.component';
+import { EditarSucursal1BodegueroComponent } from './Bodeguero/sucursal1/editar-sucursal1-bodeguero/editar-sucursal1-bodeguero.component';
+import { EditarSucursal2BodegueroComponent } from './Bodeguero/sucursal2/editar-sucursal2-bodeguero/editar-sucursal2-bodeguero.component';
+import { EditarSucursal3BodegueroComponent } from './Bodeguero/sucursal3/editar-sucursal3-bodeguero/editar-sucursal3-bodeguero.component';
+import { ListarUsuariosDuenoComponent } from './Dueno/usuarios/listar-usuarios-dueno/listar-usuarios-dueno.component';
+import { EditarUsuariosDuenoComponent } from './Dueno/usuarios/editar-usuarios-dueno/editar-usuarios-dueno.component';
+import { ListarProveedoresDuenoComponent } from './Dueno/proveedores/listar-proveedores-dueno/listar-proveedores-dueno.component';
+import { EditarProveedoresDuenoComponent } from './Dueno/proveedores/editar-proveedores-dueno/editar-proveedores-dueno.component';
+import { ListaInventarioDuenoComponent } from './Dueno/inventario/lista-inventario-dueno/lista-inventario-dueno.component';
+import { EditarPlatosPersonalComponent } from './Personal/platos/editar-platos/editar-platos.component';
+import { RegistrarPlatosComponent } from './Personal/platos/registrar-platos/registrar-platos.component';
+import { ListaProductosPersonalComponent } from './Personal/productos/lista-productos-personal/lista-productos-personal.component';
+import { VentaPersonalComponent } from './Personal/platos/venta-personal/venta-personal.component';
+import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { AnadirSucursal1Component } from './Administrador/sucursal1/anadir-sucursal1/anadir-sucursal1.component';
+import { BuscarRegistrosComponent } from './Administrador/sucursal1/buscar-registros/buscar-registros.component';
+import { AnadirSucursal2Component } from './Administrador/sucursal2/anadir-sucursal2/anadir-sucursal2.component';
+import { BuscarRegistros2Component } from './Administrador/sucursal2/buscar-registros/buscar-registros.component';
+import { AnadirSucursal3Component } from './Administrador/sucursal3/anadir-sucursal3/anadir-sucursal3.component';
+import { RegistrosSucursal3Component } from './Administrador/sucursal3/registros-sucursal3/registros-sucursal3.component';
+import { ListarLlegadas1Component } from './Administrador/sucursal1/listar-llegadas1/listar-llegadas1.component';
+import { AnadirLlegada1Component } from './Administrador/sucursal1/anadir-llegada1/anadir-llegada1.component';
+import { ListarLlegada2Component } from './Administrador/sucursal2/listar-llegada2/listar-llegada2.component';
+import { AnadirLlegada2Component } from './Administrador/sucursal2/anadir-llegada2/anadir-llegada2.component';
+import { ListarLlegadas3Component } from './Administrador/sucursal3/listar-llegadas3/listar-llegadas3.component';
+import { AnadirLlegada3Component } from './Administrador/sucursal3/anadir-llegada3/anadir-llegada3.component';
+import { AnadirLlegadaBodeguero1Component } from './Bodeguero/sucursal1/anadir-llegada-bodeguero1/anadir-llegada-bodeguero1.component';
+import { AnadirLlegadasBodeguero2Component } from './Bodeguero/sucursal2/anadir-llegadas-bodeguero2/anadir-llegadas-bodeguero2.component';
+import { AnadirLlegadasBodeguero3Component } from './Bodeguero/sucursal3/anadir-llegadas-bodeguero3/anadir-llegadas-bodeguero3.component';
+import { ListarLlegadasDueno1Component } from './Dueno/sucursal1/listar-llegadas-dueno1/listar-llegadas-dueno1.component';
+import { ListarLlegadasDueno2Component } from './Dueno/sucursal2/listar-llegadas-dueno2/listar-llegadas-dueno2.component';
+import { ListarLlegadasDueno3Component } from './Dueno/sucursal3/listar-llegadas-dueno3/listar-llegadas-dueno3.component';
+import { AlertasComponent } from './Administrador/alertas/alertas.component';
+import { AlertasenviadasComponent } from './Administrador/alertasenviadas/alertasenviadas.component';
+import { AlertasBodegueroComponent } from './Bodeguero/alertas-bodeguero/alertas-bodeguero.component';
+import { AlertasPersonalComponent } from './Personal/alertas-personal/alertas-personal.component';
+import { ListarProveedoresInactivosComponent } from './Administrador/proveedores/listar-proveedores-inactivos/listar-proveedores-inactivos.component';
+import { ListarUsuariosInactivosComponent } from './Administrador/usuarios/listar-usuarios-inactivos/listar-usuarios-inactivos.component';
+import { ListarProveedoresInactivosDuenoComponent } from './Dueno/proveedores/listar-proveedores-inactivos-dueno/listar-proveedores-inactivos-dueno.component';
+import { ListarUsuariosInactivosDuenoComponent } from './Dueno/usuarios/listar-usuarios-inactivos-dueno/listar-usuarios-inactivos-dueno.component';
+import { ListarPlatosInactivosComponent } from './Administrador/platos/listar-platos-inactivos/listar-platos-inactivos.component';
+import { ListarPlatosInactivosDuenoComponent } from './Dueno/platos/listar-platos-inactivos-dueno/listar-platos-inactivos-dueno.component';
+import { RegisterComponent } from './register/register.component';
+import { EditarProplatoComponent } from './proplato/editar-proplato/editar-proplato.component';
+import { ListaProplatoComponent } from './proplato/lista-proplato/lista-proplato.component';
+import { VistaPlatoComponent } from './proplato/vista-plato/vista-plato.component';
+import { VistaGeneralJefeinventarioComponent } from './jefe_inventario/vista-general-jefeinventario/vista-general-jefeinventario.component';
+import { Sucursal1JefeinventarioComponent } from './jefe_inventario/sucursal1-jefeinventario/sucursal1-jefeinventario.component';
+import { Sucursal3JefeinventarioComponent } from './jefe_inventario/sucursal3-jefeinventario/sucursal3-jefeinventario.component';
+import { Sucursal2JefeinventarioComponent } from './jefe_inventario/sucursal2-jefeinventario/sucursal2-jefeinventario.component';
+const routes: Routes = [
+  { path: 'categorias', component: ListaCategoriasComponent },
+  { path: 'categorias/editar/:id', component: EditarCategoriasComponent },
+  { path: 'categorias/agregar', component: EditarCategoriasComponent },
+  { path: 'usuarios', component: ListarUsuariosComponent },
+  { path: 'usuarios/agregar', component: EditarUsuariosComponent },
+  { path: 'usuarios/editar/:id', component: EditarUsuariosComponent },
+  { path: 'productos', component: ListaProductosComponent },
+  { path: 'productos/agregar', component: EditarProductoComponent },
+  { path: 'productos/editar/:id', component: EditarProductoComponent },
+  { path: 'subcategorias', component: ListaSubcategoriasComponent },
+  { path: 'subcategorias/agregar', component: EditarSubcategoriaComponent },
+  { path: 'subcategorias/editar/:id', component: EditarSubcategoriaComponent },
+  { path: 'platos', component: ListarPlatosComponent },
+  { path: 'platos/agregar', component: EditarPlatosComponent },
+  { path: 'platos/editar/:id', component: EditarPlatosComponent },
+  { path: 'proveedores', component: ListaProveedoresComponent },
+  { path: 'proveedores/agregar', component: EditarProveedoresComponent },
+  { path: 'proveedores/editar/:id', component: EditarProveedoresComponent },
+  { path: 'sucursal1', component: ListaSucursal1Component },
+  { path: 'sucursal1/editar/:id', component: EditarSucursal1Component },
+  { path: 'sucursal1/agregar', component: AnadirSucursal1Component },
+  { path: 'sucursal2', component: ListaSucursal2Component },
+  { path: 'sucursal2/agregar', component: AnadirSucursal2Component },
+  { path: 'sucursal2/editar/:id', component: EditarSucursal2Component },
+  { path: 'sucursal3', component: ListaSucursal3Component },
+  { path: 'sucursal3/agregar', component: AnadirSucursal3Component },
+  { path: 'sucursal3/editar/:id', component: EditarSucursal3Component },
+  { path: 'listarinventario', component: ListarInventarioComponent },
+  { path: 'vista-personal', component: VistaPersonalComponent },
+  { path: 'vista-admin', component: VistaAdminComponent },
+  { path: 'vista-bodeguero', component: VistaBodegueroComponent },
+  { path: 'vista-dueno', component: VistaDuenoComponent },
+  { path: 'vista-jefe-inventario', component: VistaJefeInventarioComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'sucursal1-bodeguero', component: ListarSucursal1BodegueroComponent },
+  { path: 'sucursal2-bodeguero', component: ListarSucursal2BodegueroComponent },
+  { path: 'sucursal3-bodeguero', component: ListarSucursal3BodegueroComponent },
+  { path: 'sucursal1-bodeguero/agregar', component: EditarSucursal1BodegueroComponent },
+  { path: 'sucursal2-bodeguero/agregar', component: EditarSucursal2BodegueroComponent },
+  { path: 'sucursal3-bodeguero/agregar', component: EditarSucursal3BodegueroComponent },
+  { path: 'sucursal1-bodeguero/editar/:id', component: EditarSucursal1BodegueroComponent },
+  { path: 'listar-productos-bodeguero', component: ProductosBodegueroComponent },
+  { path: 'agregar-productos-bodeguero/agregar', component: EditarProductosBodegueroComponent },
+  { path: 'editar-productos-bodeguero/editar/:id', component: EditarProductosBodegueroComponent },
+  { path: 'listar-proveedores-bodeguero', component: ProveedoresBodegueroComponent },
+  { path: 'listar-categorias-bodeguero', component: CategoriasBodegueroComponent },
+  { path: 'agregar-categorias-bodeguero/agregar', component: EditarCategoriasBodegueroComponent },
+  { path: 'listar-subcategorias-bodeguero', component: SubcategoriasBodegueroComponent },
+  { path: 'agregar-subcategorias-bodeguero/agregar', component: EditarSubtagoriasBodegueroComponent },
+  { path: 'listarqr', component: ListarqrComponent },
+  { path: 'codigoqr', component: CodigoqrComponent },
+  { path: 'listarqrbodeguero', component: ListarqrComponentBodeguero },
+  { path: 'codigoqrbodeguero', component: CodigoqrComponentBodeguero },
+  { path: 'categorias-dueno', component: VistaCategoriasComponent },
+  { path: 'subcategorias-dueno', component: VistaSubcategoriasComponent },
+  { path: 'platos-dueno', component: VistaPlatosComponent },
+  { path: 'productos-dueno', component: VistaProductosComponent },
+  { path: 'sucursal1-dueno', component: VistaSucursal1Component },
+  { path: 'sucursal2-dueno', component: Vistasucursal2Component },
+  { path: 'sucursal3-dueno', component: VistaSucursal3Component },
+  { path: 'usuarios-dueno', component: ListarUsuariosDuenoComponent },
+  { path: 'proveedores-dueno', component: ListarProveedoresDuenoComponent },
+  { path: 'proveedores-dueno/agregar', component: EditarProveedoresDuenoComponent },
+  { path: 'proveedores-dueno/editar/:id', component: EditarProveedoresDuenoComponent },
+  { path: 'usuarios-dueno/agregar', component: EditarUsuariosDuenoComponent },
+  { path: 'usuarios-dueno/editar/:id', component: EditarUsuariosDuenoComponent },
+  { path: 'inventario-dueno', component: ListaInventarioDuenoComponent },
+  { path: 'platos-personal', component: EditarPlatosPersonalComponent },
+  { path: 'platos-personal/registrar', component: RegistrarPlatosComponent },
+  { path: 'platos-personal/editar/:id', component: RegistrarPlatosComponent },
+  { path: 'productos-personal', component: ListaProductosPersonalComponent },
+  { path: 'venta-personal', component: VentaPersonalComponent },
+  { path: 'menu-principal', component: MenuPrincipalComponent },
+  { path: 'registros-sucursal1', component: BuscarRegistrosComponent },
+  { path: 'registros-sucursal2', component: BuscarRegistros2Component },
+  { path: 'registros-sucursal3', component: RegistrosSucursal3Component },
+  { path: 'llegadas-sucursal1', component: ListarLlegadas1Component },
+  { path: 'llegadas-sucursal1/agregar', component: AnadirLlegada1Component },
+  { path: 'llegadas-sucursal2', component: ListarLlegada2Component },
+  { path: 'llegadas-sucursal2/agregar', component: AnadirLlegada2Component },
+  { path: 'llegadas-sucursal3', component: ListarLlegadas3Component },
+  { path: 'llegadas-sucursal3/agregar', component: AnadirLlegada3Component },
+  { path: 'llegadas-sucursal1-bodeguero/agregar', component: AnadirLlegadaBodeguero1Component },
+  { path: 'llegadas-sucursal2-bodeguero/agregar', component: AnadirLlegadasBodeguero2Component },
+  { path: 'llegadas-sucursal3-bodeguero/agregar', component: AnadirLlegadasBodeguero3Component },
+  { path: 'llegadas-sucursal1-dueno', component: ListarLlegadasDueno1Component },
+  { path: 'llegadas-sucursal2-dueno', component: ListarLlegadasDueno2Component },
+  { path: 'llegadas-sucursal3-dueno', component: ListarLlegadasDueno3Component },
+  { path: 'alertas', component: AlertasComponent },
+  { path: 'alertasenviadas', component: AlertasenviadasComponent },
+  { path: 'alertas-bodeguero', component: AlertasBodegueroComponent },
+  { path: 'alertas-personal', component: AlertasPersonalComponent },
+  { path: 'listar-proveedores-inactivos', component: ListarProveedoresInactivosComponent },
+  { path: 'listar-proveedores-inactivos-dueno', component: ListarProveedoresInactivosDuenoComponent },
+  { path: 'listar-usuarios-inactivos', component: ListarUsuariosInactivosComponent },
+  { path: 'listar-usuarios-inactivos-dueno', component: ListarUsuariosInactivosDuenoComponent },
+  { path: 'listar-platos-inactivos', component: ListarPlatosInactivosComponent },
+  { path: 'listar-platos-inactivos-dueno', component: ListarPlatosInactivosDuenoComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'proplato/agregar', component: EditarProplatoComponent },
+  { path: 'proplato', component: ListaProplatoComponent },
+  { path: 'proplato/vista/:id', component: VistaPlatoComponent },
+  { path: 'inventario_jefeinventario', component: VistaGeneralJefeinventarioComponent },
+  { path: 'sucursal1_jefeinventario', component: Sucursal1JefeinventarioComponent },
+  { path: 'sucursal2_jefeinventario', component: Sucursal2JefeinventarioComponent },
+  { path: 'sucursal3_jefeinventario', component: Sucursal3JefeinventarioComponent },
+  { path: '**', redirectTo: '/menu-principal', pathMatch: 'full' }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

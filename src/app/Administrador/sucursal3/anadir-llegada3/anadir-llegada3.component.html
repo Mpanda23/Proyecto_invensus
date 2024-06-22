@@ -1,0 +1,25 @@
+<app-menuu></app-menuu>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+  <form (ngSubmit)="onSubmit()" #sucursalForm="ngForm" class="formulario">
+    <h1>Formulario registro de llegadas productos sucursal 3</h1><br>
+
+    <label for="idproducto">Producto</label>
+    <select required [(ngModel)]="llegadas3.idproducto" name="idproducto" class="input-formulario">
+      <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+    </select><br>
+
+    <br><label for="fecha_ingreso">Fecha: </label>
+    <br><span>{{ llegadas3.fecha_ingreso }}</span><br><br>
+
+    <label for="cantidad_producto">Cantidad de Producto</label>
+    <input type="text" required [(ngModel)]="llegadas3.cantidad_llegada" name="cantidad_llegada" class="input-formulario">
+    <br><br>
+    <div>
+        <button type="submit" class="link-boton" (click)="ejecutarActualizacionCantidad()">
+            REALIZAR
+          </button>          
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

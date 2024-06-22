@@ -1,0 +1,99 @@
+<app-imagenlogo></app-imagenlogo>
+
+<div class="formulario-contenido">
+  <form (ngSubmit)="onSubmit()" #registerForm="ngForm" class="formulario">
+    <h1>Registro De Usuario</h1><br>
+
+    <label for="usu_nombre">Nombre de usuario</label>
+    <input type="text" required [(ngModel)]="usuario.usu_nombre" name="usu_nombre" class="input-formulario"><br>
+
+    <label for="usu_tipoid">Tipo de identificación</label>
+    <select required [(ngModel)]="usuario.usu_tipoid" name="usu_tipoid" class="input-formulario">
+      <option value="CC">Cédula de Ciudadanía</option>
+      <option value="CE">Cédula de Extranjería</option>
+      <option value="TI">Tarjeta de Identidad</option>
+      <option value="PAS">Pasaporte</option>
+      <option value="NIT">NIT</option>
+    </select><br>
+
+    <label for="usu_identificacion">Número de identificación</label>
+    <input type="number" required [(ngModel)]="usuario.usu_identificacion" name="usu_identificacion"
+      class="input-formulario"><br>
+
+    <label for="usu_numerotel">Número telefónico</label>
+    <input type="tel" required name="usu_numerotel" [(ngModel)]="usuario.usu_numerotel" class="input-formulario"
+      maxlength="13"><br>
+
+    <label for="usu_correo">Correo electrónico</label>
+    <input type="email" required name="usu_correo" [(ngModel)]="usuario.usu_correo" class="input-formulario"><br>
+
+    <label for="usu_contrasena">Contraseña</label>
+    <input type="password" name="usu_contrasena" required [(ngModel)]="usuario.usu_contrasena"
+      class="input-formulario"><br>
+
+    <div class="terms-container">
+      <input type="checkbox" required name="agree_terms" [(ngModel)]="usuario.agree_terms" id="agree_terms">
+      <label for="agree_terms">Estoy de acuerdo con el registro y los términos y condiciones</label>
+    </div>
+    <br>
+    <br>
+    <div class="enlace-container">
+      <a href="javascript:void(0);" class="enlace-terminos" (click)="mostrarTerminos()">Leer términos y condiciones</a>
+    </div>
+
+    <div *ngIf="mostrarTerminosFlag" class="terminos-condiciones">
+      <h3>Términos y Condiciones</h3>
+      <p>Según la Ley 1581 de 2012 que regula el tratamiento de datos personales con el fin de garantizar el derecho
+        fundamental de las personas a su intimidad, buen nombre y privacidad:</p>
+      <ul>
+        <li><strong>Artículo 2 - Ámbito de Aplicación:</strong> Esta ley aplica al tratamiento de datos personales
+          realizado en territorio colombiano o por personas responsables y encargados de datos personales establecidos
+          en Colombia.</li>
+        <li><strong>Artículo 3 - Definiciones:</strong> Define conceptos claves como "datos personales", "tratamiento",
+          "responsable del tratamiento", y "encargado del tratamiento", entre otros, que son fundamentales para entender
+          las obligaciones y derechos en el manejo de datos personales.</li>
+        <li><strong>Artículo 4 - Principios para el tratamiento de datos personales:</strong>
+          <ul>
+            <li>Legalidad: El tratamiento de datos debe ser acorde con lo estipulado en la ley.</li>
+            <li>Finalidad: Los datos deben ser recolectados con una finalidad específica, explícita y legítima, y el
+              tratamiento debe obedecer a esta finalidad.</li>
+            <li>Libertad: El tratamiento de datos solo puede hacerse con el consentimiento previo, expreso e informado
+              del titular.</li>
+            <li>Veracidad o calidad: Los datos que se recolecten deben ser veraces, completos, exactos, actualizados,
+              comprobables y comprensibles.</li>
+            <li>Transparencia: Se debe garantizar el derecho del titular a obtener información sobre sus datos.</li>
+            <li>Acceso y circulación restringida: El tratamiento de datos personales solo puede realizarse por las
+              personas autorizadas.</li>
+            <li>Seguridad: Se deben tomar las medidas necesarias para proteger los datos personales.</li>
+            <li>Confidencialidad: Se debe garantizar la confidencialidad de los datos personales tratados.</li>
+          </ul>
+        </li>
+        <li><strong>Artículo 8 - Derechos de los Titulares:</strong> Los titulares de los datos tienen derechos como
+          conocer, actualizar y rectificar sus datos personales; ser informados sobre el uso que se les da a sus datos;
+          revocar la autorización y solicitar la eliminación del dato cuando en el tratamiento no se respeten los
+          principios, derechos y garantías constitucionales y legales.</li>
+        <li><strong>Artículo 9 - Autorización del titular:</strong> El responsable del tratamiento debe obtener la
+          autorización previa, expresa e informada del titular para recolectar y tratar sus datos.</li>
+        <li><strong>Artículo 13 - Transmisión internacional de datos personales:</strong> En caso de que la empresa
+          tenga sistemas que impliquen la transferencia de datos a otros países, deben cumplirse requisitos específicos
+          para garantizar la protección de los datos personales.</li>
+        <li><strong>Artículo 17 - Deberes de los responsables del tratamiento:</strong> Los responsables del tratamiento
+          deben cumplir con una serie de deberes, como garantizar al titular el ejercicio de sus derechos, solicitar y
+          conservar la autorización del titular, informar debidamente sobre el uso de los datos, entre otros.</li>
+        <li><strong>Artículo 18 - Deberes de los encargados del tratamiento:</strong> Los encargados del tratamiento
+          deben realizar el tratamiento conforme a las instrucciones del responsable, salvaguardar la seguridad de la
+          información, y evitar su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento.</li>
+        <li><strong>Artículo 26 - Datos personales de niños, niñas y adolescentes:</strong> El tratamiento de datos
+          personales de menores de edad debe responder y respetar el interés superior de ellos, garantizando sus
+          derechos fundamentales.</li>
+      </ul>
+    </div>
+
+    <div class="boton">
+      <button type="submit" class="link-boton" [disabled]="!registerForm.valid">Registrar</button>
+    </div>
+
+    <br>
+    <p class="IniciaSesion-link">Ya Tienes Una Cuenta <a href="/login">Inicia Sesion</a></p>
+  </form>
+</div>

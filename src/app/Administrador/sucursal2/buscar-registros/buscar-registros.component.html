@@ -1,0 +1,27 @@
+<app-menuu class="contenido-menu"></app-menuu>
+<app-imagenlogo class="imagen-logo"></app-imagenlogo>
+<label for="fecha" class="etiqueta-fecha">Fecha:</label>
+<input type="date" id="fecha" [(ngModel)]="fechaSeleccionada" class="input-fecha">
+
+<button (click)="buscarRegistrosPorFecha()" class="boton-buscar">Buscar</button>
+
+<div class="contenido-tabla">
+  <table border="1">
+    <thead>
+      <tr class="tabla-titulo">
+        <th>Nombre Producto</th>
+        <th>Cantidad Producto</th>
+        <th>Fecha Ingreso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let registro of registros" class="tabla-item">
+        <td>{{ obtenerNombreProducto(registro.idproducto) }}</td>
+        <td>{{ registro.cantidad_producto }}</td>
+        <td>{{ registro.fecha_ingreso }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer class="pie-pagina"></app-footer>

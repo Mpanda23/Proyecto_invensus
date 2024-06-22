@@ -1,0 +1,44 @@
+<app-imagenlogo></app-imagenlogo>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="box">
+    <form id="login-form" class="form" (ngSubmit)="login()">
+      <h2>Iniciar Sesion</h2>
+      <div class="inputBx inp">
+        <label for="username">Usuario:</label>
+        <span></span>
+        <input type="text" id="username" class="input" placeholder="" name="username" [(ngModel)]="usu_nombre" />
+        <i class="fas fa-user"></i>
+      </div>
+
+      <div class="inputBx inp">
+        <label for="password">Contraseña:</label>
+        <span></span>
+        <input type="password" id="password" class="input" placeholder="" name="password"
+          [(ngModel)]="usu_contrasena" />
+        <i class="fas fa-lock"></i>
+      </div>
+
+      <div class="boton">
+        <button type="submit" class="link-boton">Iniciar Sesion</button>
+      </div>
+      <br>
+      <p class="Registrar-link">¿Aun No Tienes Una Cuenta?<a href="/register">Registrate</a></p>
+    </form>
+    <div class="group"></div>
+  </div>
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<app-menu-dueno></app-menu-dueno>
+<app-imagenlogo></app-imagenlogo>
+
+<div class="contenido-tabla">
+  <table border="1">
+    <thead>
+      <tr class="tabla-titulo">
+        <th>ID</th>
+        <th>NOMBRE PLATO</th>
+        <th>DESCRIPCIÓN</th>
+        <th>PRECIO</th>
+        <th>TIEMPO DE PREPARACIÓN</th>
+        <th>CATEGORÍA</th>
+        <th>ESTADO</th>
+        <th>ACCIONES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plato of platosInactivos" class="tabla-item">
+        <td>{{ plato.idplatos }}</td>
+        <td>{{ plato.pla_nombre }}</td>
+        <td>{{ plato.pla_descripcion }}</td>
+        <td>{{ plato.pla_precio }}</td>
+        <td>{{ plato.pla_tiempopre }}</td>
+        <td>{{ plato.idproducto }}</td>
+        <td>{{ plato.estado }}</td>
+        <td>
+          <a [routerLink]="['/platos/editar/', plato.idplatos]" class="link-editar">Editar</a>
+          <span> | </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>

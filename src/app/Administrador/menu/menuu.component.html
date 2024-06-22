@@ -1,0 +1,20 @@
+<nav>
+    <div class="lista-menu">
+        <ul class="menu">
+            <li class="item-menu" [routerLink]="['/vista-admin']">Pagina Principal</li>
+            <li class="item-menu" [routerLink]="['/categorias']">Categorias</li>
+            <li class="item-menu" [routerLink]="['/subcategorias']">Subcategorias</li>
+            <li class="item-menu" [routerLink]="['/usuarios']">Usuarios</li>
+            <li class="item-menu" [routerLink]="['/platos']">Platos</li>
+            <li class="item-menu" [routerLink]="['/productos']">Productos</li>
+            <li class="item-menu" [routerLink]="['/alertas']"> Alertas</li>
+            <li class="item-menu" [routerLink]="['/proveedores']">Proveedores</li>
+            <li class="item-menu" [routerLink]="['/sucursal1']"> Sucursal 1</li>
+            <li class="item-menu" [routerLink]="['/sucursal2']"> Sucursal 2</li>
+            <li class="item-menu" [routerLink]="['/sucursal3']"> Sucursal 3</li>
+            <li class="item-menu" [routerLink]="['/listarinventario']"> Inventario</li>
+            <li class="item-menu" [routerLink]="['/codigoqr']">Codigo QR</li>
+            <li (click)="logout()" class="item-menu">Cerrar Sesion</li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,29 @@
+<app-menu-bodeguero></app-menu-bodeguero>
+<app-imagenlogo></app-imagenlogo>
+<div class="wrapper1">
+  <div class="generator-container1">
+    <header>
+      <h1>Generador Código QR</h1>
+      <p>Ingrese ID o nombre del producto para generar el código QR</p>
+    </header>
+    <div class="form">
+      <input type="text" spellcheck="false" placeholder="Ingresar ID o nombre" [(ngModel)]="idProducto">
+      <button (click)="generarQR(idProducto)">GENERAR</button>
+
+    </div>
+    <div class="qr-code" *ngIf="isQRGenerated">
+      <img #qrCodeImage alt="Código QR" [src]="getQRImageUrl(codigosGenerados[codigosGenerados.length - 1]?.qr, null)">
+
+    </div>
+  </div>
+  <div class="form">
+    <button (click)="mostrarCodigosGenerados()">Ver Códigos Generados</button><br><br><br><br><br>
+  </div>
+
+  <app-listarqrbodeguero
+    [codigosGenerados]="codigosGenerados"
+    *ngIf="mostrarListaCodigos"
+    (volverClicked)="volver()">
+  </app-listarqrbodeguero>
+</div>
+<app-footer></app-footer>

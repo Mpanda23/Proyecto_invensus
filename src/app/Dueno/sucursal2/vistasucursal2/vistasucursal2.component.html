@@ -1,0 +1,23 @@
+<app-menu-dueno></app-menu-dueno>
+<app-imagenlogo></app-imagenlogo>
+<div class="caja-agregar">
+    <a [routerLink]="['/llegadas-sucursal2-dueno']" class="boton-agregar">Entradas</a>
+</div>
+<div class="contenido-tabla">
+    <table border="rgb(0,0,0) solid 1px">
+        <thead>
+            <tr class="tabla-titulo">
+                <th>id producto</th>
+                <th>cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tabla-item" *ngFor="let sucursal of sucursal | async">
+                <td><i>{{ sucursal.idproducto }}</i></td>
+                <td><i>{{ sucursal.cantidad_producto }}</i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-footer></app-footer>
+

@@ -1,0 +1,26 @@
+.contenedor-tablas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tabla-sucursales, .tabla-total {
+    width: 50%;
+    margin: 0 20px;
+  }
+  
+  .tabla-sucursales th, .tabla-total th {
+    background: rgb(150, 180, 255);
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .tabla-sucursales td, .tabla-total td {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .tabla-sucursales tr:hover, .tabla-total tr:hover {
+    background: rgb(16, 180, 246);
+  }
+  

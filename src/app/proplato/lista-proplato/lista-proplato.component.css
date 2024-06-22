@@ -1,0 +1,67 @@
+.contenido-tabla{
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+table{
+  width: 70%;
+}
+.tabla-titulo{
+  background: rgb(150,180,255);
+}
+td{
+  text-align: center;
+padding: 5px;
+}
+.tabla-item:hover{
+  background: rgb(16,180,246);
+}
+.link-editar{
+padding:3px;
+background: rgb(120,100,255);
+text-decoration: none;
+color: rgb(0,0,0);
+border-radius: 2px;
+}
+.link-editar:hover{
+background: rgb(70,90,150);
+}
+.link-borrar{
+padding: 3px;
+background: rgb(255,50,50);
+border-radius: 2px;
+color: rgb(0,0,0);
+text-decoration: none;
+cursor:pointer;
+}
+.boton-agregar{
+padding: 20px;
+background: rgb(150,180,255);
+border-radius: 10px;
+color: rgb(0,0,0);
+text-decoration: none;
+width: 70%;
+text-align: center;
+font-size: 20px;
+transition: 0.5s;
+}
+.boton-agregar:hover{
+background: rgb(50,180,246);
+transition: 0.5s;
+color: rgb(255,255,255);
+}
+.caja-agregar{
+margin-top: 35px;
+display: flex;
+justify-content: center;
+}
+.link-ver{
+padding:3px;
+background: rgb(100, 237, 255);
+text-decoration: none;
+color: rgb(0,0,0);
+border-radius: 2px;
+}
+.link-editar:ver{
+background: rgb(70,90,150);
+}

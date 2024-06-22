@@ -1,0 +1,40 @@
+<app-menu-personal></app-menu-personal>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+    <form (ngSubmit)="onSubmit()" #platosForm="ngForm" class="formulario">
+        <h1>Formulario registro de platos</h1>
+        <div class="input">
+            <label for="pla_nombre">Nombre</label>
+            <input type="text" required [(ngModel)]="platos.pla_nombre" name="pla_nombre" class="input-formulario" pattern="^[a-zA-Z\s]+$" required>
+        </div>
+        <div class="input">
+            <label for="pla_descripcion">Descripción</label>
+            <input type="text" required [(ngModel)]="platos.pla_descripcion" name="pla_descripcion"  class="input-formulario" pattern="^[a-zA-Z\s]+$" required>
+        </div>
+        <div class="input">
+            <label for="pla_precio">Precio</label>
+            <input type="number" required [(ngModel)]="platos.pla_precio" name="pla_precio" class="input-formulario" required>
+        </div>
+        <div class="input">
+            <label for="pla_tiempopre">Tiempo Preparación</label>
+            <input type="text" required [(ngModel)]="platos.pla_tiempopre" name="pla_tiempopre" class="input-formulario" required>
+        </div>
+        <div class="input">
+            <label for="idproducto">Producto Principal</label>
+            <select required [(ngModel)]="platos.idproducto" name="idproducto" class="input-formulario">
+                <option *ngFor="let producto of productosPrincipales" [value]="producto.idproducto">{{ producto.prod_nombre }}</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="estado">Estado</label>
+            <select required [(ngModel)]="platos.estado" name="estado" id="estado">
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+        </div>
+        <div class="boton">
+            <button type="submit" class="link-boton">REALIZAR</button>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>

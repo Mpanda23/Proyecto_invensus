@@ -1,0 +1,145 @@
+<app-menu-personal></app-menu-personal>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+    <form (ngSubmit)="onSubmit()" #proplatoForm="ngForm" class="formulario">
+      <h1>Formulario registro de Productos al plato</h1>
+
+      <label for="idplatos">Nombre del Plato</label>
+      <select required [(ngModel)]="proplato.idplatos" name="idplatos" class="input-formulario">
+        <option *ngFor="let plato of platos" [value]="plato.idplatos">{{plato.idplatos}} - {{plato.pla_nombre}}</option>
+      </select><br>
+      <label for="idcategoria">Seleccione la categoría</label><br>
+      <select required [(ngModel)]="proplato.idcategoria" name="idcategoria" class="input-formulario">
+        <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">{{categoria.idcategoria}} - {{categoria.cat_nombre}}</option>
+      </select><br>
+      <button type="button" (click)="mostrarCategoria2 = true">Agregar categoría adicional</button><br>
+
+      <!-- Campo de selección de categorias -->
+      <div *ngIf="mostrarCategoria2">
+          <label for="idcategoria2">Seleccione la categoría 2</label><br>
+          <select required [(ngModel)]="proplato.idcategoria2" name="idcategoria2" class="input-formulario">
+            <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">{{categoria.idcategoria}} - {{categoria.cat_nombre}}</option>
+          </select><br>
+          <button type="button" (click)="mostrarCategoria3 = true">Agregar categoría adicional</button><br>
+      </div>
+      <div *ngIf="mostrarCategoria3">
+        <label for="idcategoria3">Seleccione la categoría 3</label><br>
+        <select required [(ngModel)]="proplato.idcategoria3" name="idcategoria3" class="input-formulario">
+          <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">{{categoria.idcategoria}} - {{categoria.cat_nombre}}</option>
+        </select><br>
+        <button type="button" (click)="mostrarCategoria4 = true">Agregar categoría adicional</button><br>
+    </div>
+    <div *ngIf="mostrarCategoria4">
+      <label for="idcategoria4">Seleccione la categoría 4</label><br>
+      <select required [(ngModel)]="proplato.idcategoria4" name="idcategoria4" class="input-formulario">
+        <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">{{categoria.idcategoria}} - {{categoria.cat_nombre}}</option>
+      </select><br>
+      <button type="button" (click)="mostrarCategoria5 = true">Agregar categoría adicional</button><br>
+  </div>
+  <div *ngIf="mostrarCategoria5">
+    <label for="idcategoria5">Seleccione la categoría 5</label><br>
+    <select required [(ngModel)]="proplato.idcategoria5" name="idcategoria5" class="input-formulario">
+      <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">{{categoria.idcategoria}} - {{categoria.cat_nombre}}</option>
+    </select><br>
+    <button type="button" (click)="mostrarCategoria6 = true">Agregar categoría adicional</button><br>
+</div>
+<div *ngIf="mostrarCategoria6">
+  <label for="idcategoria6">Seleccione la categoría 6</label><br>
+  <select required [(ngModel)]="proplato.idcategoria6" name="idcategoria6" class="input-formulario">
+    <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">{{categoria.idcategoria}} - {{categoria.cat_nombre}}</option>
+  </select><br>
+  <button type="button" (click)="mostrarCategoria7 = true">Agregar categoría adicional</button><br>
+</div>
+<div *ngIf="mostrarCategoria7">
+  <label for="idcategoria7">Seleccione la categoría 7</label><br>
+  <select required [(ngModel)]="proplato.idcategoria7" name="idcategoria7" class="input-formulario">
+    <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">{{categoria.idcategoria}} - {{categoria.cat_nombre}}</option>
+  </select><br>
+
+</div>
+
+      <label for="idproducto">Seleccione los productos</label><br>
+      <select required [(ngModel)]="proplato.idproducto" name="idproducto" class="input-formulario">
+        <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+      </select><br>
+      <label for="cantidad">Cantidad</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad" name="cantidad" class="input-formulario"><br>
+
+      <button type="button" (click)="mostrarProducto2 = true">Agregar Otro Producto</button><br>
+      <!-- Campo de selección de otros productos -->
+      <div *ngIf="mostrarProducto2">
+        <label for="idproducto2">Seleccione el Producto 2</label><br>
+        <select required [(ngModel)]="proplato.idproducto2" name="idproducto2" class="input-formulario">
+          <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+        </select><br>
+        <label for="cantidad">Cantidad:2</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad2" name="cantidad2" class="input-formulario"><br>
+        <button type="button" (click)="mostrarProducto3 = true">Agregar Otro Producto</button><br>
+    </div>
+    <div *ngIf="mostrarProducto3">
+      <label for="idproducto3">Seleccione el Producto 3</label><br>
+      <select required [(ngModel)]="proplato.idproducto3" name="idproducto3" class="input-formulario">
+        <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+      </select><br>
+      <label for="cantidad">Cantidad:3</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad3" name="cantidad3" class="input-formulario"><br>
+      <button type="button" (click)="mostrarProducto4 = true">Agregar Otro Producto</button><br>
+  </div>
+  <div *ngIf="mostrarProducto4">
+    <label for="idproducto4">Seleccione el Producto 4</label><br>
+    <select required [(ngModel)]="proplato.idproducto4" name="idproducto4" class="input-formulario">
+      <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+    </select><br>
+    <label for="cantidad">Cantidad:4</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad4" name="cantidad4" class="input-formulario"><br>
+    <button type="button" (click)="mostrarProducto5 = true">Agregar Otro Producto</button><br>
+</div>
+<div *ngIf="mostrarProducto5">
+  <label for="idproducto5">Seleccione el Producto 5</label><br>
+  <select required [(ngModel)]="proplato.idproducto5" name="idproducto5" class="input-formulario">
+    <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+  </select><br>
+  <label for="cantidad">Cantidad:5</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad5" name="cantidad5" class="input-formulario"><br>
+  <button type="button" (click)="mostrarProducto6 = true">Agregar Otro Producto</button><br>
+</div>
+<div *ngIf="mostrarProducto6">
+  <label for="idproducto6">Seleccione el Producto 6</label><br>
+  <select required [(ngModel)]="proplato.idproducto6" name="idproducto6" class="input-formulario">
+    <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+  </select><br>
+  <label for="cantidad">Cantidad:6</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad6" name="cantidad6" class="input-formulario"><br>
+  <button type="button" (click)="mostrarProducto7 = true">Agregar Otro Producto</button><br>
+</div>
+<div *ngIf="mostrarProducto7">
+  <label for="idproducto7">Seleccione el Producto 7</label><br>
+  <select required [(ngModel)]="proplato.idproducto7" name="idproducto7" class="input-formulario">
+    <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+  </select><br>
+  <label for="cantidad">Cantidad:7</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad7" name="cantidad7" class="input-formulario"><br>
+  <button type="button" (click)="mostrarProducto8 = true">Agregar Otro Producto</button><br>
+</div>
+<div *ngIf="mostrarProducto8">
+  <label for="idproducto8">Seleccione el Producto 8</label><br>
+  <select required [(ngModel)]="proplato.idproducto8" name="idproducto8" class="input-formulario">
+    <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+  </select><br>
+  <label for="cantidad">Cantidad:8</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad8" name="cantidad8" class="input-formulario"><br>
+  <button type="button" (click)="mostrarProducto9 = true">Agregar Otro Producto</button><br>
+</div>
+<div *ngIf="mostrarProducto9">
+  <label for="idproducto9">Seleccione el Producto 9</label><br>
+  <select required [(ngModel)]="proplato.idproducto9" name="idproducto9" class="input-formulario">
+    <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+  </select><br>
+  <label for="cantidad">Cantidad:9</label>
+      <input type="number" required [(ngModel)]="proplato.cantidad9" name="cantidad9" class="input-formulario"><br>
+</div>
+      <div class="boton">
+        <button type="submit" class="link-boton">Ejecutar</button>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,37 @@
+<app-menu-personal></app-menu-personal>
+<app-imagenlogo></app-imagenlogo>
+
+<div class="contenido-tabla">
+    <table border="rgb(0,0,0) solid 1px">
+        <thead>
+            <tr class="tabla-titulo">
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Valor</th>
+                <th>Vencimiento</th>
+                <th>Alerta</th>
+                <th>ID Categoría</th>
+                <th>Categoría</th>
+                <th>ID Proveedor</th>
+                <th>Proveedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos$ | async" class="tabla-item">
+                <td><i>{{ producto.idproducto }}</i></td>
+                <td><i>{{ producto.prod_nombre }}</i></td>
+                <td><i>{{ producto.prod_descripcion }}</i></td>
+                <td><i>{{ producto.prod_valor }}</i></td>
+                <td><i>{{ formatearFecha(producto.prod_vencimiento) }}</i></td>
+                <td><i>{{ formatearFecha(producto.prod_alerta) }}</i></td>
+                <td><i>{{ producto.idcategoria }}</i></td>
+                <td><i>{{ obtenerNombreCategoria(producto.idcategoria) }}</i></td>
+                <td><i>{{ producto.idproveedores }}</i></td>
+                <td><i>{{ obtenerNombreProveedor(producto.idproveedores) }}</i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-footer></app-footer>

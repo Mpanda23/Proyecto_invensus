@@ -1,0 +1,26 @@
+<app-menu-bodeguero></app-menu-bodeguero>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+  <form (ngSubmit)="onSubmit()" #sucursalForm="ngForm" class="formulario">
+    <h1>Formulario registro de producto sucursal 2</h1><br>
+
+    <label for="idproducto">Producto</label>
+    <select required [(ngModel)]="sucursal2.idproducto" name="idproducto" class="input-formulario">
+      <option *ngFor="let producto of productos" [value]="producto.idproducto">{{producto.idproducto}} - {{producto.prod_nombre}}</option>
+    </select><br>
+
+    <br><label for="fecha_ingreso">Fecha: </label>
+    <br><span>{{ sucursal2.fecha_ingreso }}</span><br><br>
+
+    <label for="cantidad_producto">Cantidad de Producto</label>
+    <input type="text" required [(ngModel)]="sucursal2.cantidad_producto" name="cantidad_producto"
+      id="cantidad_producto" class="input-formulario">
+    <br><br>
+    <div>
+      <button type="submit" class="link-boton">
+        REALIZAR
+      </button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer> 

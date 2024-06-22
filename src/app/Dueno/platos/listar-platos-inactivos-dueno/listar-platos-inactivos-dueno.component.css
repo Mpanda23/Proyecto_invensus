@@ -1,0 +1,125 @@
+.contenido-tabla{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
+  table{
+    width: 70%;
+  background: rgb(255,255,255);
+  }
+  .tabla-titulo{
+    background: radial-gradient(ellipse at center,#94daec 0%, #94daec 35%, #7cb5e4 100%);
+  }
+  td{
+    text-align: center;
+  padding: 5px;
+  }
+  .tabla-item:hover{
+    background: rgb(180,180,180);
+  }
+  .link-editar{
+  padding:3px;
+  background: rgb(53, 157, 235);
+  text-decoration: none;
+  color: rgb(0,0,0);
+  border-radius: 2px;
+  }
+  .link-editar:hover{
+  background: rgb(33, 177, 235);
+  }
+  .link-borrar{
+  padding: 3px;
+  background: rgb(253, 21, 21);
+  border-radius: 2px;
+  color: rgb(0,0,0);
+  text-decoration: none;
+  cursor:pointer;
+  }
+  .boton-agregar{
+  background: rgb(33, 177, 235);
+  border: rgb(0,0,0) solid 2px;
+  transition: .3s;
+  width: 70vw;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgb(0,0,0);
+  font-size: 18px;
+  }
+  .boton-agregar:hover{
+  background: rgba(40,100,190, .8);
+  color: rgb(255,255,255);
+  text-decoration: underline;
+  transition: .3s;
+  }
+  .caja-agregar{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  }
+  
+  @media screen and (max-width: 1000px) {
+  .caja-agregar{
+    display: flex;
+    margin: auto;
+    margin-top: 3vh;
+    top: 3vh;
+    position: fixed;
+    width: 100vw;
+  }
+  
+  .boton-agregar{
+    background: rgb(33, 177, 235);
+    border: rgb(0,0,0) solid 3px;
+    transition: .3s;
+  }
+  
+  .boton-agregar:hover{
+    background: rgba(40,100,190, .8);
+    color: rgb(255,255,255);
+    text-decoration: underline;
+    transition: .3s;
+  }
+  
+  .contenido-tabla{
+    position: fixed;
+    width: 100vw;
+    top: 12vw;
+  }
+  
+  
+  }
+  @media screen and (max-width: 1000px) {
+    .caja-agregar {
+      display: flex;
+      justify-content: center;
+      margin: 10px auto; /* Ajusta el margen superior e inferior según sea necesario */
+      width: 90%; /* Ancho máximo */
+    }
+  
+    .boton-agregar {
+      background: rgb(33, 177, 235);
+      border: rgb(0, 0, 0) solid 3px;
+      transition: .3s;
+      width: 100%; /* Ancho completo */
+      padding: 10px 20px;
+      box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+      margin-bottom: 10px; /* Agrega espacio entre el botón y la tabla */
+    }
+  
+    .boton-agregar:hover {
+      background: rgba(40, 100, 190, .8);
+      color: rgb(255, 255, 255);
+      text-decoration: underline;
+      transition: .3s;
+    }
+  
+    .contenido-tabla {
+      width: 90%; /* Ancho máximo */
+      margin: 0 auto; /* Centra horizontalmente */
+      max-height: 70vh; /* Altura máxima con desbordamiento */
+      overflow-y: auto; /* Desplazamiento vertical si la tabla es demasiado larga */
+    }
+  }
+  

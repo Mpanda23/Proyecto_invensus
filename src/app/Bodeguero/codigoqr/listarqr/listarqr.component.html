@@ -1,0 +1,10 @@
+
+<div id="codigos-lista" class="codigos-lista">
+  <div *ngFor="let codigo of codigosGenerados" class="generator-container">
+    <p>ID: {{ codigo.idproducto }}</p>
+    <p>Nombre: {{ codigo.prod_nombre }}</p>
+    <img class="qr-code" [src]="getQRImageUrl(codigo.qr, codigo)" alt="Código QR">
+  </div>
+  <!--button class="form-button" (click)="volver()">Volver al generador</!--button-->
+</div>
+

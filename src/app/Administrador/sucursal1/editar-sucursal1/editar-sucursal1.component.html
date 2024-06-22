@@ -1,0 +1,22 @@
+<app-menuu></app-menuu>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+  <form (ngSubmit)="onSubmit()" #sucursalForm="ngForm" class="formulario">
+    <h1>Formulario registro de producto sucursal 1</h1><br>
+
+    <label for="idproducto">Producto</label>
+    <input type="text" [(ngModel)]="sucursal1.idproducto" name="idproducto" class="input-formulario" readonly>
+
+    <label for="cantidad_producto">Cantidad de Producto</label>
+    <input type="text" required [(ngModel)]="sucursal1.cantidad_producto" name="cantidad_producto"
+      id="cantidad_producto" class="input-formulario">
+    <br><br>
+    <div>
+      <button type="submit" class="link-boton">
+        REALIZAR
+      </button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>
+

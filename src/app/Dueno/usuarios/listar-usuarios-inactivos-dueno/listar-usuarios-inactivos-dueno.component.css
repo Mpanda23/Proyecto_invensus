@@ -1,0 +1,37 @@
+.contenido-tabla {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
+  
+  table {
+    width: 70%;
+  }
+  
+  .tabla-titulo {
+    background: rgb(150, 180, 255);
+  }
+  
+  td {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .tabla-item:hover {
+    background: rgb(16, 180, 246);
+  }
+  
+  .link-editar {
+    padding: 3px;
+    background: rgb(120, 100, 255);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-radius: 2px;
+  }
+  
+  .link-editar:hover {
+    background: rgb(70, 90, 150);
+  }
+  
+
+  

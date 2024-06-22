@@ -1,0 +1,54 @@
+<app-menuu></app-menuu>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+  <form (ngSubmit)="onSubmit()" #usuariosForm="ngForm" class="formulario">
+    <h1>Formulario registro de usuarios</h1><br>
+
+    <label for="usu_nombre">Nombre de usuario</label>
+    <input type="text" required [(ngModel)]="usuarios.usu_nombre" name="usu_nombre" class="input-formulario"><br>
+
+    <label for="usu_tipoid">Tipo de identificación</label>
+    <select required [(ngModel)]="usuarios.usu_tipoid" name="usu_tipoid" class="input-formulario">
+      <option value="CC">Cédula de Ciudadanía</option>
+      <option value="CE">Cédula de Extranjería</option>
+      <option value="TI">Tarjeta de Identidad</option>
+      <option value="PAS">Pasaporte</option>
+      <option value="NIT">NIT</option>
+    </select><br>
+
+    <label for="usu_identificacion">Número de identificación</label>
+    <input type="number" required [(ngModel)]="usuarios.usu_identificacion" name="usu_identificacion"
+      class="input-formulario"><br>
+
+    <label for="usu_numerotel">Número telefónico</label>
+    <input type="tel" required name="usu_numerotel" [(ngModel)]="usuarios.usu_numerotel" class="input-formulario"
+      maxlength="13"><br>
+
+    <label for="usu_correos">Correo electrónico</label>
+    <input type="email" required name="usu_correo" [(ngModel)]="usuarios.usu_correo" class="input-formulario"><br>
+
+    <label for="usu_contrasena">Contraseña</label>
+    <input type="password" name="usu_contrasena" required [(ngModel)]="usuarios.usu_contrasena"
+      class="input-formulario"><br>
+
+    <label for="usu_estado">Estado</label>
+    <select required [(ngModel)]="usuarios.usu_estado" name="usu_estado" class="input-formulario">
+      <option value="activo">Activo</option>
+      <option value="inactivo">Inactivo</option>
+    </select><br>
+
+    <label for="idgenero">Género</label>
+    <select required [(ngModel)]="usuarios.idgenero" name="idgenero" class="input-formulario">
+      <option *ngFor="let genero of generos" [value]="genero.idgenero">{{ genero.genero_tipo }}</option>
+    </select><br>
+
+    <label for="idroles">Roles</label>
+    <select required [(ngModel)]="usuarios.idroles" name="idroles" class="input-formulario">
+      <option *ngFor="let rol of roles" [value]="rol.idroles">{{ rol.rol_nombre }}</option>
+    </select><br><br>
+
+    <div class="boton">
+      <button type="submit" class="link-boton">Ejecutar</button>
+    </div>
+  </form>
+</div>

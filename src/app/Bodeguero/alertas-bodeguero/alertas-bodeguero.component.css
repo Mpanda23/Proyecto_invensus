@@ -1,0 +1,113 @@
+body, html {
+    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    
+    flex-direction: column;
+    
+}
+/*formulario000000*/
+form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #1b1b1b;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-top: 150px; 
+    margin-bottom: auto;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0; 
+    padding-top: 10px; 
+    color: #dc3545; 
+}
+
+.btn {
+    display: block;
+    width: 100%; 
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; 
+}
+/*COLOR DE BOTONES DE LISTADO ALERTA */
+.btn-primary {
+    background-color: #0c33a0;; 
+}
+
+/*BOTON ENVIAR */
+.btn-outline-danger {
+    background-color: #dc3545; 
+}
+
+/*MARGEN BOTONES ADICIONALES */
+.row.justify-content-center {
+    margin-top: 20px; 
+}
+
+.btn-primary {
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+
+@media screen and (max-width: 1000px) {
+    .caja-agregar {
+      display: flex;
+      justify-content: center;
+      margin: 10px auto; /* Ajusta el margen superior e inferior según sea necesario */
+      width: 90%; /* Ancho máximo */
+    }
+  
+    .boton-agregar {
+      background: rgb(33, 177, 235);
+      border: rgb(0, 0, 0) solid 3px;
+      transition: .3s;
+      width: 100%; /* Ancho completo */
+      padding: 10px 20px;
+      box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+      margin-bottom: 10px; /* Agrega espacio entre el botón y la tabla */
+    }
+  
+    .boton-agregar:hover {
+      background: rgba(40, 100, 190, .8);
+      color: rgb(255, 255, 255);
+      text-decoration: underline;
+      transition: .3s;
+    }
+  
+    .contenido-tabla {
+      width: 90%; /* Ancho máximo */
+      margin: 0 auto; /* Centra horizontalmente */
+      max-height: 70vh; /* Altura máxima con desbordamiento */
+      overflow-y: auto; /* Desplazamiento vertical si la tabla es demasiado larga */
+    }
+  }
+  
+  

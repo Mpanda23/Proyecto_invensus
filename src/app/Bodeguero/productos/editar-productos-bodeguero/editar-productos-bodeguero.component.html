@@ -1,0 +1,39 @@
+<app-menu-bodeguero></app-menu-bodeguero>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+    <form (ngSubmit)="onSubmit()" #productoForm="ngForm" class="formulario">
+        <h1>Formulario registro de productos</h1>
+        <label for="prod_nombre">Nombre del Producto</label>
+        <input type="text" required [(ngModel)]="producto.prod_nombre" name="prod_nombre" class="input-formulario" pattern="[A-Za-z ]*" title="Solo se permiten letras y espacios"><br>
+        <label for="prod_descripcion">Descripción del Producto</label>
+        <input type="text" required [(ngModel)]="producto.prod_descripcion" name="prod_descripcion" class="input-formulario"><br>
+        <label for="prod_valor">Valor del Producto</label>
+        <input type="number" required [(ngModel)]="producto.prod_valor" name="prod_valor" class="input-formulario"><br>
+        <label for="prod_vencimiento">Fecha de Vencimiento</label>
+        <input type="date" required [(ngModel)]="producto.prod_vencimiento" name="prod_vencimiento" class="input-formulario" (change)="validarFechas()"><br>
+        <label for="prod_alerta">Alerta del Producto</label>
+        <input type="date" required [(ngModel)]="producto.prod_alerta" name="prod_alerta" class="input-formulario" (change)="validarFechas()"><br>
+
+        <label class="control-label" for="idcategoria">ID Categoría</label>
+        <select required [(ngModel)]="producto.idcategoria" name="idcategoria" class="input-formulario">
+  <option *ngFor="let categoria of categorias" [value]="categoria.idcategoria">
+    {{ categoria.idcategoria }} - {{ categoria.cat_nombre }}
+  </option>
+</select>
+
+<div *ngIf="proveedoresLoaded">
+  <label for="idproveedores">ID del Proveedor</label>
+  <select required [(ngModel)]="producto.idproveedores" name="idproveedores" class="input-formulario">
+    <option *ngFor="let proveedor of proveedores" [value]="proveedor.idproveedores">
+      {{ proveedor.idproveedores }} - {{ proveedor.pro_nombre }}
+    </option>
+  </select><br>
+</div>
+
+        <br>
+
+        <div class="boton">
+            <button type="submit" class="link-boton">REALIZAR</button>
+        </div>
+    </form>
+</div>

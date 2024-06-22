@@ -1,0 +1,40 @@
+<app-menu-dueno></app-menu-dueno>
+<app-imagenlogo></app-imagenlogo>
+
+<div class="contenido-tabla">
+  <table border="rgb(0,0,0) solid 1px">
+    <thead>
+      <tr class="tabla-titulo">
+        <th>ID USUARIO</th>
+        <th>NOMBRE</th>
+        <th>TIPO IDENTIFICACION</th>
+        <th>NUMERO IDENTIFICACION</th>
+        <th>NUMERO TELEFONICO</th>
+        <th>CORREO ELECTRONICO</th>
+        <th>CONTRASEÑA</th>
+        <th>ESTADO</th>
+        <th>GENERO</th>
+        <th>ROL</th>
+        <th>ACCIONES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuariosInactivos | async" class="tabla-item">
+        <td><i>{{ usuario.idusuarios }}</i></td>
+        <td><i>{{ usuario.usu_nombre }}</i></td>
+        <td><i>{{ usuario.usu_tipoid }}</i></td>
+        <td><i>{{ usuario.usu_identificacion }}</i></td>
+        <td><i>{{ usuario.usu_numerotel }}</i></td>
+        <td><i>{{ usuario.usu_correo }}</i></td>
+        <td><i>{{ usuario.usu_contrasena }}</i></td>
+        <td><i>{{ usuario.usu_estado }}</i></td>
+        <td><i>{{ usuario.idroles }}</i></td>
+        <td><i>{{ usuario.idgenero }}</i></td>
+        <td>
+          <a [routerLink]="['/usuarios/editar/', usuario.idusuarios]" class="link-editar">Editar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>

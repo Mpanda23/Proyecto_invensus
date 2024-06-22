@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.formulario-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #B7E8EB 100%);
+  overflow: hidden;
+}
+
+.formulario {
+  position: relative;
+  width: 350px;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 40px;
+  background: #015871;
+  box-shadow: 0 0 50px #0ef;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.formulario:hover {
+  box-shadow: 0 0 50px rgb(39, 230, 150);
+}
+
+.formulario h1 {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.formulario label {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+
+.formulario .input-formulario,
+.formulario select {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.formulario .input-formulario:focus,
+.formulario select:focus {
+  border-color: #0ef;
+}
+
+.formulario select option {
+  color: #000;
+}
+
+.formulario select {
+  text-align-last: left;
+}
+
+.formulario .boton {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.formulario .link-boton {
+  width: 100%;
+  height: 40px;
+  background: rgb(159, 252, 236);
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.formulario .IniciaSesion-link {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.formulario .IniciaSesion-link a {
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.formulario .IniciaSesion-link a:hover {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(24, 106, 106, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*OLAS*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #B7E8EB 100%);
+  overflow: hidden;
+}
+
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@-webkit-keyframes swell {
+
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+@keyframes swell {
+
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+}
+
+.terms-container label {
+  order: -1;
+  margin-right: 10px;
+}
+
+.larger-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.terminos-condiciones {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+
+}
+
+.enlace-terminos {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}

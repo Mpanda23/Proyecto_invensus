@@ -1,0 +1,28 @@
+<app-menu-personal></app-menu-personal>
+<app-imagenlogo></app-imagenlogo>
+<div class="caja-agregar">
+    <a [routerLink]="['/proplato/agregar']" class="boton-agregar">agregar</a>
+</div>
+<div class="contenido-tabla">
+    <table border="rgb(0,0,0) solid 1px">
+        <thead>
+            <tr class="tabla-titulo">
+                <th>Nombre del Plato</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let proplato of proplatos | async" class="tabla-item">
+                <td><i>{{ obtenerNombrePlato(proplato.idplatos) }}</i></td>
+                <td>
+                    <a [routerLink]="['/proplato/editar/', proplato.proplaid]" class="link-editar">Editar</a>
+                    <span> | </span>
+                    <a [routerLink]="['/proplato/vista/', proplato.proplaid]" class="link-editar">Revisar Plato</a>
+                    <span> | </span>
+                    <a (click)="generarOrden(proplato)" class="link-borrar">Generar Orden</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-footer></app-footer>

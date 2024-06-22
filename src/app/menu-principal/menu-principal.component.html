@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="login-button" (click)="mostrarLogin()">Iniciar sesion</button>
+
+  <ul>
+    <li><button (click)="mostrarSeccion('quienes-somos')">Quiénes somos</button></li>
+    <li><button (click)="mostrarSeccion('historia')">Historia</button></li>
+    <li><button (click)="mostrarSeccion('ubicaciones')">Ubicaciones</button></li>
+    <li><button (click)="mostrarSeccion('contacto')">Contacto</button></li>
+  </ul>
+
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+
+  <section id="quienes-somos" [ngClass]="{ 'active': currentSection === 'quienes-somos' }">
+    <h2>Quiénes somos</h2>
+    <p>
+      Somos La Poche, una pescadería comprometida con la frescura y calidad de los productos del mar. Desde 1997, nos
+      esforzamos por ofrecer lo mejor a nuestros clientes.
+    </p>
+  </section>
+
+  <section id="historia" [ngClass]="{ 'active': currentSection === 'historia' }">
+    <h2>Historia</h2>
+    <p>
+      En el año de 1997 abre sus puertas la pescadería La Poche, siendo solo un local no mayor a 40 metros cuadrados,
+      dando respuesta a la necesidad de superación personal de su propietaria y su deseo de sacar una familia adelante.
+      En sus inicios, no importaba lo humilde de sus instalaciones, ya que lo que faltaba en lujo sobraba en sazón y
+      atención; poco a poco, estos dos ingredientes fueron dando a conocer este humilde negocio como uno de los mejores del
+      sector.
+    </p>
+  </section>
+
+  <section id="ubicaciones" [ngClass]="{ 'active': currentSection === 'ubicaciones' }">
+    <h2>Ubicaciones</h2>
+    <div class="ubicaciones">
+      <div class="ubicacion" (click)="mostrarInformacion('En Carvajal nos encuentras en la siguiente dirección...')">
+        <p>Carvajal</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.55620952508502!2d-74.1352221!3d4.6120312!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9eb75dabecd3%3A0xbbda412885d2672e!2zTGEgUG9jaMOp!5e0!3m2!1ses!2sco!4v1693012260491!5m2!1ses!2sco"
+          width="100%" height="150" style="border:1;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="ubicacion" (click)="mostrarInformacion('En Castilla nos encuentras en la siguiente dirección...')">
+        <p>Castilla</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d497.09417377702636!2d-74.1407653!3d4.6380262!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c1a09283af3%3A0x6d84511801317252!2sLa%20Poche%20Pescader%C3%ADa!5e0!3m2!1ses!2sco!4v1693012410449!5m2!1ses!2sco"
+          width="100%" height="150" style="border:1;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="ubicacion" (click)="mostrarInformacion('En Salitre nos encuentras en la siguiente dirección...')">
+        <p>Salitre</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.1867340764304!2d-74.09946698695423!3d4.639172247857242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bc325c2189b%3A0x5ca9df55b7a1d3aa!2sLA%20POCHE%20PESCADERIA!5e0!3m2!1ses!2sco!4v1693012496647!5m2!1ses!2sco"
+          width="100%" height="150" style="border:1;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" [ngClass]="{ 'active': currentSection === 'contacto' }">
+    <h2>Contacto</h2>
+    <p>
+      Puedes contactarnos al número: 4060880 - 2042551 - 7583930
+    </p>
+  </section>
+
+  <div class="box">
+    <span style="--i:1;"><img
+        src="https://www.buengusto.co/wp-content/uploads/2022/02/pescaderias-marisquerias-bogota-1920x1200.png"
+        alt=""></span>
+    <span style="--i:2;"><img src="https://attikasv.com/wp-content/uploads/2017/11/pescado-relleno-con-camarones.jpg"
+        alt=""></span>
+    <span style="--i:3;"><img
+        src="https://boquisabroso.com.co/wp-content/uploads/2023/03/Receta-de-Churrasco-Colombiano.jpg" alt=""></span>
+    <span style="--i:4;"><img src="https://cocina-casera.com/wp-content/uploads/2017/12/Sopa-de-pollo.jpg"
+        alt=""></span>
+    <span style="--i:5;"><img
+        src="https://static.wixstatic.com/media/7ad47b_def5d558283e4bb19d450db95545da75~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg"
+        alt=""></span>
+    <span style="--i:6;"><img src="https://a.storyblok.com/f/160385/b2afa5c5df/platos_pescado.jpg"
+        alt=""></span>
+    <span style="--i:7;"><img
+        src="https://www.comedera.com/wp-content/uploads/2022/04/salmon-con-salsa-de-champin%CC%83ones.jpg"
+        alt=""></span>
+    <span style="--i:8;"><img src="https://k-listo.com/wp-content/uploads/2020/04/JUGOS_NATURALES.jpg.webp"
+        alt=""></span>
+  </div>
+
+ 
+ 
+
+
+
+  <div class="informacion" *ngIf="informacionAMostrar">
+    <p>{{ mostrarInformacion }}</p>
+  </div>
+
+
+</body>

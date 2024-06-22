@@ -1,0 +1,33 @@
+<app-menu-dueno></app-menu-dueno>
+<app-imagenlogo></app-imagenlogo>
+<div class="contenido-tabla">
+    <table border="rgb(0,0,0) solid 1px">
+        <thead>
+            <tr class="tabla-titulo">
+                <th>ID PROVEEDOR</th>
+                <th>NOMBRE</th>
+                <th>DIRECCION</th>
+                <th>CORREO</th>
+                <th>TELEFONO</th>
+                <th>ESTADO</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let proveedor of proveedoresInactivos | async" class="tabla-item">
+                <td>{{ proveedor.idproveedores }}</td>
+                <td>{{ proveedor.pro_nombre }}</td>
+                <td>{{ proveedor.pro_direccion }}</td>
+                <td>{{ proveedor.pro_mail }}</td>
+                <td>{{ proveedor.pro_telefono }}</td>
+                <td>{{ proveedor.pro_estado }}</td>
+                <td>
+                    <a [routerLink]="['/proveedores/editar/', proveedor.idproveedores]" class="link-editar">Editar</a>
+                    <span> | </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-footer></app-footer>

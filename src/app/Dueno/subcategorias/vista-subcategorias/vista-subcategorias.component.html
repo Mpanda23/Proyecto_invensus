@@ -1,0 +1,24 @@
+<app-menu-dueno></app-menu-dueno>
+<app-imagenlogo></app-imagenlogo>
+<div class="contenido-tabla">
+  <table border="rgb(0,0,0) solid 1px">
+    <thead>
+      <tr class="tabla-titulo">
+        <th>ID</th>
+        <th>NOMBRE SUBCATEGORIA</th>
+        <th>ID CATEGORÍA</th>
+        <th>NOMBRE CATEGORÍA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subcategoria of subcategorias | async" class="tabla-item">
+        <td><i>{{ subcategoria.idsubcategorias }}</i></td>
+        <td><i>{{ subcategoria.subc_nombre }}</i></td>
+        <td><i>{{ subcategoria.idcategoria }}</i></td>
+        <td><i>{{ obtenerNombreCategoria(subcategoria.idcategoria) }}</i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>
+

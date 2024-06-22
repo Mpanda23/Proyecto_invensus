@@ -1,0 +1,31 @@
+<app-menuu></app-menuu>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+    <form (ngSubmit)="onSubmit()" #proveedoresForm="ngForm" class="formulario">
+      <h1>Formulario registro de proveedores</h1>
+
+      <label for="pro_nombre">Nombre</label>
+      <input type="text" required [(ngModel)]="proveedores.pro_nombre" name="pro_nombre" class="input-formulario" pattern="^[a-zA-Z\s]+$"><br>
+
+      <label for="pro_direccion">Direccion</label>
+      <input type="text" required [(ngModel)]="proveedores.pro_direccion" name="pro_direccion" class="input-formulario"><br>
+
+      <label for="pro_mail">Correo</label>
+      <input type="email" required [(ngModel)]="proveedores.pro_mail" name="pro_mail" class="input-formulario"><br>
+
+      <label for="pro_telefono">Telefono</label>
+      <input type="tel" required [(ngModel)]="proveedores.pro_telefono" name="pro_telefono" class="input-formulario" maxlength="13">
+
+
+      <label for="pro_estado">Estado</label>
+      <select required [(ngModel)]="proveedores.pro_estado" name="pro_estado" class="input-formulario">
+        <option value="Activo">Activo</option>
+        <option value="Inactivo">Inactivo</option>
+      </select><br><br>
+
+      <div class="boton">
+        <button type="submit" class="link-boton">Ejecutar</button>
+      </div>
+    </form>
+  </div>
+

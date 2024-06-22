@@ -1,0 +1,18 @@
+<app-menu-bodeguero></app-menu-bodeguero>
+<app-imagenlogo></app-imagenlogo>
+<div class="formulario-contenido">
+  <form (ngSubmit)="onSubmit()" #categoriasForm="ngForm" class="formulario">
+    <h1>Formulario registro de categorías</h1><br>
+    <label for="cat_nombre">Nombre de la categoría</label>
+    <input type="text" required [(ngModel)]="categorias.cat_nombre" name="cat_nombre" #catNombre="ngModel" class="input-formulario"
+      pattern="^[a-zA-Z\s]+$">
+    <br>
+
+    <br>
+    
+    <div class="boton">
+      <button type="submit" class="link-boton">REALIZAR</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

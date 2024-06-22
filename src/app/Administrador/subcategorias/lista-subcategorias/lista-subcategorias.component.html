@@ -1,0 +1,30 @@
+<app-menuu></app-menuu>
+<app-imagenlogo></app-imagenlogo>
+<div class="caja-agregar">
+  <a class="btn btn-primary" [routerLink]="['/subcategorias/agregar']" class="boton-agregar">agregar</a>
+</div>
+<div class="contenido-tabla">
+  <table border="rgb(0,0,0) solid 1px">
+    <thead>
+      <tr class="tabla-titulo">
+        <th>ID</th>
+        <th>NOMBRE SUBCATEGORIA</th>
+        <th>ID CATEGORÍA</th>
+        <th>NOMBRE CATEGORÍA</th>
+        <th>ACCIONES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subcategoria of subcategorias | async" class="tabla-item">
+        <td><i>{{ subcategoria.idsubcategorias }}</i></td>
+        <td><i>{{ subcategoria.subc_nombre }}</i></td>
+        <td><i>{{ subcategoria.idcategoria }}</i></td>
+        <td><i>{{ obtenerNombreCategoria(subcategoria.idcategoria) }}</i></td>
+        <td>
+          <a [routerLink]="['/subcategorias/editar/', subcategoria.idsubcategorias]" class="link-editar">Editar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>

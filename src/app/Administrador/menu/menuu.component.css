@@ -1,0 +1,72 @@
+.lista-menu {
+  margin-left: 4vw;
+  display: block;
+  width: 85vw;
+  margin-top: 1vw;
+  background: rgb(18, 39, 83);
+  border-radius: 15px;
+  color: rgb(255,255,255);
+}
+
+.item-menu {
+  display: inline-block;
+  width: 7vw;
+  padding: 15px;
+  margin-left: .5%;
+  margin-right: .5%;
+}
+
+.item-menu:hover {
+  text-decoration: underline;
+  color: rgb(255,255,255);
+  background: rgb(60, 79, 243);
+  border-radius: 15px;
+}
+
+.menu{
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .lista-menu {
+    position: fixed; /* Cambia a posición fija */
+    top: 0; /* Coloca el menú en la parte superior */
+    left: 0; /* Coloca el menú en el borde izquierdo */
+    width: 3vw;
+    margin: 0;
+    border-radius: 0px;
+    height: 100vh;
+    transition: .5s;
+    z-index: 1000; /* Asegura que el menú esté por encima del resto del contenido */
+  }
+
+  .lista-menu:hover {
+    width: 50vw;
+    transition: .5s;
+  }
+
+  .lista-menu .item-menu {
+    display: none;
+  }
+
+  .lista-menu:hover .item-menu {
+    width: 40vw;
+    display: block;
+  }
+
+  .item-menu {
+    width: 40vw;
+    text-align: center;
+    padding: 10px;
+    transition: .3s;
+    margin-left: 5vw;
+  }
+
+  .item-menu:hover {
+    background: rgb(60, 79, 243);
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    transition: 0.3s;
+  }
+}
+

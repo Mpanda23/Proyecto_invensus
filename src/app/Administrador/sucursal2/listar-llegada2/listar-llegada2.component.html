@@ -1,0 +1,27 @@
+<app-menuu></app-menuu>
+<app-imagenlogo></app-imagenlogo>
+<div class="caja-agregar">
+    <a [routerLink]="['/llegadas-sucursal2/agregar']" class="boton-agregar">agregar</a>
+    <!--a [routerLink]="['/registros-sucursal2']">Registros</a-->
+</div>
+<div class="contenido-tabla">
+    <table border="rgb(0,0,0) solid 1px">
+        <thead>
+            <tr class="tabla-titulo">
+                <th>nombre producto</th>
+                <th>cantidad</th>
+                <!--th>Acciones</th-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tabla-item" *ngFor="let llegadas2 of llegadas2 | async">
+                <td><i>{{ obtenerNombreProducto(llegadas2.idproducto) }}</i></td>
+                <td><i>{{ llegadas2.cantidad_llegada }}</i></td>
+                <!--td>
+                    <a [routerLink]="['/sucursal2/editar/', sucursal.idsucursal]" class="link-editar">Agregar</a>
+                </td-->
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-footer></app-footer>

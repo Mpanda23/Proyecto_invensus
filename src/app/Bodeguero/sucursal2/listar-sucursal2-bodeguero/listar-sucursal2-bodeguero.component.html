@@ -1,0 +1,23 @@
+<app-menu-bodeguero></app-menu-bodeguero>
+<app-imagenlogo></app-imagenlogo>
+<div class="caja-agregar">
+    <a [routerLink]="['/sucursal2-bodeguero/agregar']" class="boton-agregar">agregar</a>
+    <a [routerLink]="['/llegadas-sucursal2-bodeguero/agregar']" class="boton-agregar">agregar llegada</a>
+</div>
+<div class="contenido-tabla">
+    <table border="rgb(0,0,0) solid 1px">
+        <thead>
+            <tr class="tabla-titulo">
+                <th>nombre producto</th>
+                <th>cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tabla-item" *ngFor="let sucursal of sucursal | async">
+                <td><i>{{ sucursal.prod_nombre }}</i></td>
+                <td><i>{{ sucursal.cantidad_producto }}</i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-footer></app-footer>

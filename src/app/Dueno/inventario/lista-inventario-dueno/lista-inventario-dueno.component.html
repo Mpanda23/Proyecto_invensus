@@ -1,0 +1,39 @@
+<app-menu-dueno></app-menu-dueno>
+
+<div class="contenedor-tablas">
+  <table border="1" class="tabla-sucursales">
+    <thead>
+      <tr>
+        <th>Nombre de Producto</th>
+        <th>Cantidad Producto Sucursal 1</th>
+        <th>Cantidad Producto Sucursal 2</th>
+        <th>Cantidad Producto Sucursal 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of producto">
+        <td>{{ prod.prod_nombre }}</td>
+        <td>{{ obtenerCantidadSucursal1(prod.idproducto) }}</td>
+        <td>{{ obtenerCantidadSucursal2(prod.idproducto) }}</td>
+        <td>{{ obtenerCantidadSucursal3(prod.idproducto) }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table border="1" class="tabla-total">
+    <thead>
+      <tr>
+        <th>Nombre de Producto</th>
+        <th>Cantidad Total</th>
+        <th>Valor Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of productosConCantidadesTotales">
+        <td>{{ prod.prod_nombre }}</td>
+        <td>{{ prod.cantidad_total }}</td>
+        <td>{{ prod.cantidad_multiplicada }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

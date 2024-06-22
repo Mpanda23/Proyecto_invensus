@@ -1,0 +1,20 @@
+
+<div class="container">
+    <div *ngIf="alertasEnviadas" class="alertas-container">
+      <h2 class="titulo">Listado de Alertas Enviadas</h2>
+      <ul>
+        <li *ngFor="let alerta of alertasEnviadas" class="alerta-item">
+          <strong>Asunto:</strong> {{ alerta.asunto }} <br>
+          <strong>Destinatario:</strong> {{ alerta.destinatario }} <br>
+          <strong>Mensaje:</strong> {{ alerta.mensaje }} <br>
+        </li>
+      </ul>
+    </div>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+  
+    <button class="btn btn-primary volver-button" routerLink="/alertas">Volver</button>
+  </div>
+  

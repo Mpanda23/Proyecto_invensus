@@ -1,0 +1,85 @@
+<app-menu-personal></app-menu-personal>
+<app-imagenlogo></app-imagenlogo>
+
+<div class="container">
+  <h2>Vista de Plato</h2>
+
+  <div *ngIf="error" class="error-message">{{ error }}</div>
+
+  <div *ngIf="proplato" class="proplato-details">
+    <table>
+      <tr>
+        <th>ID</th>
+        <td>{{ proplato.proplaid }}</td>
+      </tr>
+      <tr>
+        <th>Nombre del Plato</th>
+        <td>{{ obtenerNombrePlato(proplato.idplatos) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idcategoria">
+        <th>Categoría</th>
+        <td>{{ obtenerNombreCategoria(proplato.idcategoria) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idcategoria2">
+        <th>Categoría2</th>
+        <td>{{ obtenerNombreCategoria(proplato.idcategoria2) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idcategoria3">
+        <th>Categoría3</th>
+        <td>{{ obtenerNombreCategoria(proplato.idcategoria3) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idcategoria4">
+        <th>Categoría4</th>
+        <td>{{ obtenerNombreCategoria(proplato.idcategoria4) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idcategoria5">
+        <th>Categoría5</th>
+        <td>{{ obtenerNombreCategoria(proplato.idcategoria5) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idcategoria6">
+        <th>Categoría6</th>
+        <td>{{ obtenerNombreCategoria(proplato.idcategoria6) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idcategoria7">
+        <th>Categoría7</th>
+        <td>{{ obtenerNombreCategoria(proplato.idcategoria7) }}</td>
+      </tr>
+      <tr>
+        <th>Productos</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idproducto2">
+        <th>Producto2</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto2) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idproducto3">
+        <th>Producto3</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto3) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idproducto4">
+        <th>Producto4</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto4) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idproducto5">
+        <th>Producto5</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto5) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idproducto6">
+        <th>Producto6</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto6) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idproducto7">
+        <th>Producto7</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto7) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idproducto8">
+        <th>Producto8</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto8) }}</td>
+      </tr>
+      <tr *ngIf="proplato.idproducto9">
+        <th>Producto9</th>
+        <td>{{ obtenerNombreProducto(proplato.idproducto9) }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

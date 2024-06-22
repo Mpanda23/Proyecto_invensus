@@ -1,0 +1,242 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body{
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    background: #3498DB;
+    justify-content: center;
+    
+  }
+  
+ 
+.wrapper {
+  height: 265px;
+  max-width: 410px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 20px 25px 0;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+ 
+}
+.wrapper2 {
+  height: auto;
+  max-width: 1400px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 20px 25px 0;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 200vh;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+
+
+
+  .wrapper.active{
+    height: 530px;
+  }
+  
+  header h1{
+    font-size: 21px;
+    font-weight: 500;
+  }
+  
+  header p{
+    margin-top: 5px;
+    color: #575757;
+    font-size: 16px;
+  }
+  
+  .wrapper .form{
+    margin: 20px 0 25px;
+  }
+  
+  .form :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.1s ease;
+  }
+  
+  .form input{
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid #999;
+  }
+  
+  .form input:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+  }
+  
+  .form input::placeholder{
+    color: #999;
+  }
+  
+  .form button{
+    color: #000000;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    
+      background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #B7E8EB 100%);
+      overflow: hidden;
+    
+  }
+  
+  .qr-code{
+    opacity: 0;
+    display: flex;
+    padding: 33px 0;
+    border-radius: 5px;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    border: 1px solid #ccc;
+  }
+  
+  .wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+  }
+  
+  .qr-code img{
+    width: 170px;
+  }
+  
+  @media (max-width: 430px){
+    .wrapper{
+        height: 255px;
+        padding: 16px 20px;
+    }
+    .wrapper.active{
+        height: 510px;
+    }
+    header p{
+        color: #696969;
+    }
+    .form :where(input, button){
+        height: 52px;
+    }
+    .qr-code img{
+        width: 160px;
+    }  
+  }
+  body {
+    background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #B7E8EB 100%);
+    overflow: hidden;
+  }
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    margin: 0; 
+}
+
+p {
+    color: #666;
+}
+
+.codigos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start; 
+    margin-top: 0;
+}
+
+.codigos-lista div {
+    flex: 0 0 calc(22.22% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #12ebf7 100%);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+  background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #B7E8EB 100%);
+}
+
+
+
+#volverBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e40303;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#volverBtn:hover {
+  background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #B7E8EB 100%);
+}
+body {
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #B7E8EB 100%);
+  justify-content: center;
+  overflow-y: auto; 
+}
+
+

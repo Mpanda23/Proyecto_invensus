@@ -1,0 +1,28 @@
+<app-menu-bodeguero></app-menu-bodeguero>
+<app-imagenlogo></app-imagenlogo>
+<div class="contenido-tabla">
+    <table border="rgb(0,0,0) solid 1px">
+        <thead>
+            <tr class="tabla-titulo">
+                <th>ID PROVEEDOR</th>
+                <th>NOMBRE</th>
+                <th>DIRECCION</th>
+                <th>CORREO</th>
+                <th>TELEFONO</th>
+                <th>ESTADO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let proveedor of proveedores | async" class="tabla-item">
+                <td>{{ proveedor.idproveedores }}</td>
+                <td>{{ proveedor.pro_nombre }}</td>
+                <td>{{ proveedor.pro_direccion }}</td>
+                <td>{{ proveedor.pro_mail }}</td>
+                <td>{{ proveedor.pro_telefono }}</td>
+                <td>{{ proveedor.pro_estado }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-footer></app-footer>

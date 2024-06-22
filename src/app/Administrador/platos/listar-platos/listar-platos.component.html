@@ -1,0 +1,37 @@
+<app-menuu></app-menuu>
+<app-imagenlogo></app-imagenlogo>
+<div class="caja-agregar">
+  <a [routerLink]="['/platos/agregar']" class="boton-agregar">agregar</a>
+  <a [routerLink]="['/listar-platos-inactivos']" class="boton-inactivos">Inactivos</a>
+</div>
+<div class="contenido-tabla">
+  <table border="1">
+    <thead>
+      <tr class="tabla-titulo">
+        <th> ID </th>
+        <th> NOMBRE PLATO </th>
+        <th> DESCRIPCION </th>
+        <th> PRECIO </th>
+        <th> TIEMPO DE PREPARACION </th>
+        <th> CATEGORIA </th>
+        <th> ESTADO </th>
+        <th> ACCIONES </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let platos of platos | async" class="tabla-item">
+          <td><i>{{ platos.idplatos }}</i></td>
+          <td><i>{{ platos.pla_nombre }}</i></td>
+          <td><i>{{ platos.pla_descripcion }}</i></td>
+          <td><i>{{ platos.pla_precio }}</i></td>
+          <td><i>{{ platos.pla_tiempopre }}</i></td>
+          <td><i>{{ platos.idproducto }}</i></td>
+          <td><i>{{ platos.estado }}</i></td>
+          <td>
+            <a [routerLink]="['/platos/editar/', platos.idplatos]" class="link-editar">Editar</a>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>

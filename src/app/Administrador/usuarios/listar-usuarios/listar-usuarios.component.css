@@ -1,0 +1,169 @@
+/* Estilos para la tabla */
+.contenido-tabla {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+table {
+  width: 70%;
+}
+
+.tabla-titulo {
+  background: rgb(150, 180, 255);
+}
+
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+.tabla-item:hover {
+  background: rgb(16, 180, 246);
+}
+
+.link-editar {
+  padding: 3px;
+  background: rgb(120, 100, 255);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-radius: 2px;
+}
+
+.link-editar:hover {
+  background: rgb(70, 90, 150);
+}
+
+.link-borrar {
+  padding: 3px;
+  background: rgb(255, 50, 50);
+  border-radius: 2px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para los botones */
+.boton-agregar,
+.boton-inactivos {
+  padding: 20px 180px; 
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.5s;
+  margin: 0 10px;
+}
+
+.boton-agregar {
+  background: rgb(150, 180, 255);
+}
+
+.boton-inactivos {
+  background: rgb(224, 16, 16);
+}
+
+.boton-agregar:hover,
+.boton-inactivos:hover {
+  background: rgb(50, 180, 246);
+  transition: 0.5s;
+  color: rgb(255, 255, 255);
+}
+
+.caja-botones {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.caja-agregar {
+  display: flex;
+  justify-content: center;
+}
+
+.caja-inactivos {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media query para dispositivos a partir de los 1000px */
+@media screen and (max-width: 1000px) {
+  .contenido-tabla {
+    width: 100%; /* Ancho máximo en dispositivos más pequeños */
+    overflow-x: auto; /* Agrega desplazamiento horizontal */
+  }
+
+  table {
+    width: 100%; /* Ancho máximo de la tabla en dispositivos más pequeños */
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+}
+
+/* Clase para ocultar elementos en dispositivos más pequeños */
+.hidden-xs {
+  display: none;
+}
+
+/* Estilos para dispositivos con pantalla pequeña */
+@media screen and (max-width: 1000px) {
+  /* Estilos para los botones */
+  .caja-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .caja-agregar,
+  .caja-inactivos {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .boton-agregar,
+  .boton-inactivos {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* Estilos para la tabla */
+  .contenido-tabla {
+    overflow-x: auto; /* Agrega desplazamiento horizontal si la tabla es demasiado ancha */
+    margin-top: 20px;
+    max-width: 90%;
+    margin-left: 10%;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  .tabla-item{
+    max-height: 2%;
+  }
+
+}
