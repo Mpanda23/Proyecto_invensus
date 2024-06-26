@@ -8,15 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class LlegadasSucursal3Service {
 
-  BASE_URL = "http://localhost:3000";
+  BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 
-  obtenerLlegadasSucursal3(){
+  obtenerLlegadasSucursal3() {
     return this.http.get<llegadasSucursal3Model[]>(`${this.BASE_URL}/llegadas-sucursal3`);
   }
 
-  agregarLlegadasSucursal3(llegadas3: llegadasSucursal3Model){
+  agregarLlegadasSucursal3(llegadas3: llegadasSucursal3Model) {
     return this.http.post<string>(`${this.BASE_URL}/llegadas-sucursal3/agregar`, llegadas3);
   }
 
@@ -25,5 +25,5 @@ export class LlegadasSucursal3Service {
     const payload = { idproducto, nuevaCantidad };
     return this.http.put<any>(url, payload);
   }
-  
+
 }

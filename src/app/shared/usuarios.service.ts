@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuariosService {
-  BASE_URL = "http://localhost:3000"; // Define la URL base de tu API
+  BASE_URL = "https://apiinvensus.onrender.com"; // Define la URL base de tu API
 
   constructor(private http: HttpClient) { }
 
@@ -20,8 +20,8 @@ export class UsuariosService {
     return this.http.get<UsuariosModel[]>(`${this.BASE_URL}/usuarios/${id}`);
   }
 
-   // Método para agregar un nuevo usuario
-   agregaruUsuarios(usuario: RegistroUsuario) {
+  // Método para agregar un nuevo usuario
+  agregaruUsuarios(usuario: RegistroUsuario) {
     return this.http.post<any>(`${this.BASE_URL}/usuarios/agregar`, usuario);
   }
 

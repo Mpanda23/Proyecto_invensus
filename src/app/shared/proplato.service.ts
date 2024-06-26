@@ -8,7 +8,7 @@ import { ProplatoModel } from './proplato.model';
 })
 export class ProplatoService {
 
-  BASE_URL = "http://localhost:3000";
+  BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 
@@ -38,5 +38,5 @@ export class ProplatoService {
   }
   generarOrden(id: string): Observable<any> {
     return this.http.put<any>(`${this.BASE_URL}/proplato/${id}/productos`, null);
-}
+  }
 }

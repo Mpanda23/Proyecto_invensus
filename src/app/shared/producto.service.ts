@@ -14,7 +14,7 @@ import { llegadasSucursal3Model } from './llegadas-sucursal3.model';
 })
 export class ProductoService {
 
-  BASE_URL = "http://localhost:3000";
+  BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 
@@ -24,7 +24,7 @@ export class ProductoService {
 
   obtenerProductoPorId(id: string) {
     return this.http.get<ProductoModel>(`${this.BASE_URL}/productos/${id}`);
-  }  
+  }
 
   agregarProducto(producto: ProductoModel) {
     return this.http.post<string>(`${this.BASE_URL}/productos/agregar`, producto);
@@ -38,15 +38,15 @@ export class ProductoService {
     return this.http.delete<string>(`${this.BASE_URL}/productos/borrar/${id}`);
   }
 
-  obtenerSucursal1SinRegistro(){
+  obtenerSucursal1SinRegistro() {
     return this.http.get<Sucursal1Model[]>(`${this.BASE_URL}/sucursal1noregistrado`);
   }
 
-  obtenerSucursal2SinRegistro(){
+  obtenerSucursal2SinRegistro() {
     return this.http.get<Sucursal2Model[]>(`${this.BASE_URL}/sucursal2noregistrado`);
   }
 
-  obtenerSucursal3SinRegistro(){
+  obtenerSucursal3SinRegistro() {
     return this.http.get<Sucursal3Model[]>(`${this.BASE_URL}/sucursal3noregistrado`)
   }
 
@@ -54,15 +54,15 @@ export class ProductoService {
     return this.http.get<any[]>(`${this.BASE_URL}/sucursalessuma/${id}`);
   }
 
-  obtenerProductosSucursal1(){
+  obtenerProductosSucursal1() {
     return this.http.get<llegadasSucursal1Model[]>(`${this.BASE_URL}/llegadas-sucursal1-productos`);
   }
 
-  obtenerProductosSucursal2(){
+  obtenerProductosSucursal2() {
     return this.http.get<llegadasSucursal2Model[]>(`${this.BASE_URL}/llegadas-sucursal2-productos`);
   }
 
-  obtenerProductosSucursal3(){
+  obtenerProductosSucursal3() {
     return this.http.get<llegadasSucursal3Model[]>(`${this.BASE_URL}/llegadas-sucursal3-productos`);
   }
 
@@ -70,7 +70,7 @@ export class ProductoService {
     return this.http.get<boolean>(`${this.BASE_URL}/productos/verificarNombre/${nombre}`);
   }
 
-  obtenerValorMultiplicado(id: string): Observable<any[]>{
+  obtenerValorMultiplicado(id: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.BASE_URL}/total-valor/${id}`);
   }
 

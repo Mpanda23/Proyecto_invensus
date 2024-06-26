@@ -7,7 +7,7 @@ import { SubcategoriaModel } from './subcategoria.model'; // Asegúrate de usar 
 })
 export class SubcategoriaService {
 
-  BASE_URL = "http://localhost:3000";
+  BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 

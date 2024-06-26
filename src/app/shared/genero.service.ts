@@ -7,7 +7,7 @@ import { GeneroModel } from './genero.model';
   providedIn: 'root'
 })
 export class GeneroService {
-  private BASE_URL = "http://localhost:3000";
+  private BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 

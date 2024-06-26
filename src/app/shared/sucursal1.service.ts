@@ -8,38 +8,38 @@ import { Observable } from 'rxjs';
 })
 export class Sucursal1Service {
 
-  BASE_URL = "http://localhost:3000";
+  BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 
-  obtenerSucursal1(){
+  obtenerSucursal1() {
     return this.http.get<Sucursal1Model[]>(`${this.BASE_URL}/sucursal1`);
   }
 
-  obtenerSucursal1PorId(id: string){
+  obtenerSucursal1PorId(id: string) {
     return this.http.get<Sucursal1Model[]>(`${this.BASE_URL}/sucursal1/${id}`);
   }
 
-  agregarSucursal1(sucursal1: Sucursal1Model){
+  agregarSucursal1(sucursal1: Sucursal1Model) {
     return this.http.post<string>(`${this.BASE_URL}/sucursal1/agregar`, sucursal1);
   }
 
-  actualizarSucursal1(sucursal1: Sucursal1Model){
+  actualizarSucursal1(sucursal1: Sucursal1Model) {
     return this.http.put<string>(`${this.BASE_URL}/sucursal1/actualizar/${sucursal1.idsucursal}`, sucursal1);
   }
 
-  borrarSucursal1(id:string){
+  borrarSucursal1(id: string) {
     return this.http.delete<string>(`${this.BASE_URL}/sucursal1/borrar/${id}`);
   }
 
-  obtenerCantidad(id:string){
+  obtenerCantidad(id: string) {
     return this.http.get<number>(`${this.BASE_URL}/sucursal1cantidad/${id}`);
   }
 
   actualizarCantidad(idSucursal: string, cantidad: number): Observable<string> {
     return this.http.put<string>(`${this.BASE_URL}/sucursal1/actualizarcantidad/${idSucursal}`, { cantidad });
   }
-  
+
   obtenerRegistrosPorFecha(fecha: string) {
     return this.http.get<any[]>(`${this.BASE_URL}/sucursal1fecha/${fecha}`);
   }

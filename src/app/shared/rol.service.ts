@@ -7,7 +7,7 @@ import { RolModel } from './rol.model';
   providedIn: 'root'
 })
 export class RolService {
-  private BASE_URL = "http://localhost:3000";
+  private BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 

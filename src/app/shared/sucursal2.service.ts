@@ -7,27 +7,27 @@ import { Sucursal2Model } from './sucursal2.model';
 })
 export class Sucursal2Service {
 
-  BASE_URL = "http://localhost:3000";
+  BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 
-  obtenerSucursal2(){
+  obtenerSucursal2() {
     return this.http.get<Sucursal2Model[]>(`${this.BASE_URL}/sucursal2`);
   }
 
-  obtenerSucursal2PorId(id: string){
+  obtenerSucursal2PorId(id: string) {
     return this.http.get<Sucursal2Model[]>(`${this.BASE_URL}/sucursal2/${id}`);
   }
 
-  agregarSucursal2(sucursal2: Sucursal2Model){
+  agregarSucursal2(sucursal2: Sucursal2Model) {
     return this.http.post<string>(`${this.BASE_URL}/sucursal2/agregar`, sucursal2);
   }
 
-  actualizarSucursal2(sucursal2: Sucursal2Model){
+  actualizarSucursal2(sucursal2: Sucursal2Model) {
     return this.http.put<string>(`${this.BASE_URL}/sucursal2/actualizar/${sucursal2.idsucursal}`, sucursal2);
   }
 
-  borrarSucursal2(id:string){
+  borrarSucursal2(id: string) {
     return this.http.delete<string>(`${this.BASE_URL}/sucursal2/borrar/${id}`);
   }
 

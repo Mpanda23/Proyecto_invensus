@@ -7,11 +7,11 @@ import { ventaModel } from './ventaplatos.model';
 })
 export class VentaPlatosService {
 
-  BASE_URL = "http://localhost:3000"; // Corregir la URL localhost
+  BASE_URL = "https://apiinvensus.onrender.com"; // Corregir la URL localhost
 
   constructor(private http: HttpClient) { }
 
-  venderPlato(venta: ventaModel){
+  venderPlato(venta: ventaModel) {
     return this.http.post<string>(`${this.BASE_URL}/venta-platos`, venta);
   }
 }

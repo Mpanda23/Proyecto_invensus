@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProveedoresService {
 
-  BASE_URL = "http://localhost:3000";
+  BASE_URL = "https://apiinvensus.onrender.com";
 
   constructor(private http: HttpClient) { }
 
