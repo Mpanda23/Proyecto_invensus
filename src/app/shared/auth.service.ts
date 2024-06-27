@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://apiinvensus.onrender.com/';
+  private apiUrl = 'https://apiinvensus.onrender.com';
 
   constructor(private http: HttpClient) { }
 
